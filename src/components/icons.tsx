@@ -23,3 +23,8 @@ export {
   SiMysql as Mysql,
   SiTypescript as Typescript,
 } from 'react-icons/si'
+
+export {
+  RiMoonClearLine as DarkMode,
+  RiSunLine as LightMode,
+} from 'react-icons/ri'
