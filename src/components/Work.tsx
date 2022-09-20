@@ -1,8 +1,4 @@
-import React from 'react'
-
-type Props = {}
-
-export default function Work({}: Props) {
+export default function Work() {
   return (
     <div>Work</div>
   )

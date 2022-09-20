@@ -19,8 +19,9 @@ export {
   SiGraphql as Graphql,
   SiJavascript as Javascript,
   SiJest as Jest,
-  SiMongodb as MongoDb,
+  SiMongodb as Mongodb,
   SiMysql as Mysql,
+  SiPug as Pug,
   SiTypescript as Typescript,
 } from 'react-icons/si'
 

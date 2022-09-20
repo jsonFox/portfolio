@@ -1,9 +1,9 @@
-import React from 'react'
+import { Heading } from "@chakra-ui/react"
 
-type Props = {}
-
-export default function SectionTitle({}: Props) {
+export default function SectionTitle({ text }: { text: string }) {
   return (
-    <div>SectionTitle</div>
+    <Heading as='h2' px={4} mb={4}>
+      {text}
+    </Heading>
   )
 }
