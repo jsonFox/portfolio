@@ -1,8 +1,11 @@
-export default function SkillIcon({ icon, name }: { icon: JSX.Element, name: string }) {
+import { IconType } from "react-icons/lib";
+import { Box } from "@chakra-ui/react";
+
+export default function SkillIcon({ Icon, name }: { Icon: IconType, name: string }) {
   return (
-    <>
-      {icon}
+    <Box maxW='max-content'>
+      {<Icon size="50px" />}
       <p>{name}</p>
-    </>
+    </Box>
   )
 }
