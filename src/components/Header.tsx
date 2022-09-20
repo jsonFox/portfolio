@@ -1,12 +1,8 @@
-import { Box, Flex, Stack, Heading, Link, IconButton, useColorMode } from '@chakra-ui/react';
+import { Flex, Stack, Heading, Link, IconButton, useColorMode } from '@chakra-ui/react';
 import { LightMode, DarkMode } from './icons';
 import { Key } from 'react';
 
-interface HeaderProps {
-  sections: Array<string>
-}
-
-export default function Header({ sections }: HeaderProps) {
+export default function Header({ sections }: { sections: Array<string> }) {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Flex
@@ -30,12 +26,7 @@ export default function Header({ sections }: HeaderProps) {
   )
 }
 
-interface NavItemProps {
-  key: Key,
-  title: string
-}
-
-function NavItem({ title }: NavItemProps) {
+function NavItem({ title }: { key: Key, title: string }) {
   return (
     <div>{title}</div>
   )
