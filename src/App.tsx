@@ -20,25 +20,25 @@ function App() {
         <GridItem colSpan={3}>
           <Header sections={sections} />
         </GridItem>
-        <GridItem h='100vh' rowSpan={sections.length + 1} colStart={1} bg='lightyellow'>
+        <GridItem h='100%' rowSpan={sections.length + 1} colStart={1} bg='#CCFFBB'>
           {/* Left Nav */}
         </GridItem>
-        <GridItem h='100vh' rowSpan={sections.length + 1} colStart={3} bg='lightyellow'>
+        <GridItem h='100%' rowSpan={sections.length + 1} colStart={3} bg='#CCFFBB'>
           {/* Right Nav */}
         </GridItem>
-        <GridItem h='250' colStart={2} rowStart={2} bg='papayawhip'>
+        <GridItem h='250' colStart={2} rowStart={2} bg='#BBEEDD'>
           <About />
         </GridItem>
         <GridItem h='250' colStart={2} bg='lightblue'>
           <Skills />
         </GridItem>
-        <GridItem h='250' colStart={2} bg='papayawhip'>
+        <GridItem h='250' colStart={2} bg='#BBEEDD'>
           <Work />
         </GridItem>
         <GridItem h='250' colStart={2} bg='lightblue'>
           <Contact />
         </GridItem>
-        <GridItem h='250' colStart={2} bg='papayawhip'>
+        <GridItem h='250' colStart={2} bg='#BBEEDD'>
           <Footer />
         </GridItem>
       </Grid>
