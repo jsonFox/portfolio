@@ -41,10 +41,15 @@ const overrides = extendTheme({
   },
   components: {
     Text: {
-      variants: textVariants,
+      variants: { ...textVariants },
     },
     Heading: {
-      variants: textVariants,
+      variants: {
+        ...textVariants,
+        'section': {
+          textDecoration: 'underline'
+        }
+      },
     },
     Button: {
       baseStyle: {

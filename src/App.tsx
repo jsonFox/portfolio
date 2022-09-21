@@ -19,7 +19,7 @@ function App() {
         as='main'
         direction='column'
         w='auto'
-        mx={{ sm: 0, md: '20vw' }}
+        mx={{ md: '10vw', lg: '20vw' }}
         px={6}
       >
         <About />

@@ -1,12 +1,15 @@
-import { Flex, Box, Heading, Text, Button } from "@chakra-ui/react"
-import ReactTypingEffect from 'react-typing-effect'
+import { Flex, Box, Heading, Text, Button, Image, Hide } from "@chakra-ui/react";
+import ReactTypingEffect from 'react-typing-effect';
+import portraitSrc from '../assets/portrait.png';
+import { scrollTo } from "../utils";
 
 export default function About() {
   const titles = [
     'Full-Stack Developer',
     'Comp Sci Graduate',
     'Cat Dad',
-    'Gaming Enthusiast'
+    'Gamer',
+    'Coding Hobbyist',
   ];
   return (
     <Flex
@@ -15,6 +18,7 @@ export default function About() {
       h='100vh'
       direction='row'
       alignItems='center'
+      justifyContent='space-between'
     >
       <Box transform='translateY(-8em)'>
         <Text variant='colored' fontSize='2xl'>
@@ -37,10 +41,24 @@ export default function About() {
             eraseDelay={1500}
           />
         </Heading>
-        <Button variant='wide' mt={4}>
+        <Button
+          variant='wide'
+          mt={4}
+          onClick={() => scrollTo('mywork')}
+        >
           See my work
         </Button>
       </Box>
+      <Hide below='sm'>
+        <Image
+          src={portraitSrc}
+          alt='Jason Fox'
+          borderRadius='full'
+          h={{ md: '175px', lg: '200px' }}
+          maxH='30%'
+          transform='translateY(-8em)'
+        />
+      </Hide>
     </Flex>
   )
 }
