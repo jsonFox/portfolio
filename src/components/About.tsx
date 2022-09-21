@@ -13,8 +13,8 @@ export default function About() {
       as='section'
       id='about'
       h='100vh'
-      direction='column'
-      justifyContent='center'
+      direction='row'
+      alignItems='center'
     >
       <Box transform='translateY(-8em)'>
         <Text variant='colored' fontSize='2xl'>
@@ -37,7 +37,7 @@ export default function About() {
             eraseDelay={1500}
           />
         </Heading>
-        <Button>
+        <Button variant='wide' mt={4}>
           See my work
         </Button>
       </Box>

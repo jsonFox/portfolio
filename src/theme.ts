@@ -2,6 +2,28 @@ import { extendTheme } from '@chakra-ui/react'
 import { mode } from '@chakra-ui/theme-tools'
 import type { StyleFunctionProps } from '@chakra-ui/styled-system'
 
+const textVariants = {
+  'muted': (props: StyleFunctionProps) => ({
+    color: mode('blackAlpha.800', 'whiteAlpha.700')(props),
+  }),
+  'colored': (props: StyleFunctionProps) => ({
+    color: mode('cyan.600', 'cyan.500')(props)
+  })
+}
+
+const btnProps = (props: StyleFunctionProps) => ({
+  px: 6,
+  py: 6,
+  bg: 'cyan.500',
+  color: mode('gray.50', 'gray.900')(props),
+  _hover: {
+    bg: 'cyan.700'
+  },
+  _active: {
+    bg: 'cyan.800'
+  },
+})
+
 const overrides = extendTheme({
   fonts: {
     heading: `'Overpass', sans-serif`,
@@ -19,22 +41,25 @@ const overrides = extendTheme({
   },
   components: {
     Text: {
-      variants: {
-        'muted': (props: StyleFunctionProps) => ({
-          color: props.colorMode === 'dark' ? 'whiteAlpha.700' : 'blackAlpha.700',
-        }),
-        'colored': {
-          color: 'cyan.600'
-        }
-      }
+      variants: textVariants,
     },
     Heading: {
+      variants: textVariants,
+    },
+    Button: {
+      baseStyle: {
+        fontFamily: `'Overpass', sans-serif`,
+        bg: 'cyan.500',
+        borderRadius: 3
+      },
       variants: {
-        'muted': (props: StyleFunctionProps) => ({
-          color: props.colorMode === 'dark' ? 'whiteAlpha.700' : 'blackAlpha.700',
+        solid: btnProps,
+        'wide': (props: StyleFunctionProps) => ({
+          ...btnProps(props),
+          px: 10
         }),
-        'colored': {
-          color: 'cyan.400'
+        defaultProps: {
+          bg: ''
         }
       }
     }
