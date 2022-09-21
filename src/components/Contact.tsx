@@ -1,9 +1,10 @@
-import React from 'react'
+import { Box } from "@chakra-ui/react"
+import { SectionTitle } from "./partials"
 
-type Props = {}
-
-export default function Contact({}: Props) {
+export default function Contact() {
   return (
-    <div>Contact</div>
+    <Box as='section' id='contactme'>
+      <SectionTitle text='Contact Me' />
+    </Box>
   )
 }

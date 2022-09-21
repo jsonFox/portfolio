@@ -7,6 +7,7 @@ export default function Header({ sections }: { sections: Array<string> }) {
     <Flex
       as='header'
       justifyContent='space-between'
+      w='100%'
       py={1}
       px='10%'
     >

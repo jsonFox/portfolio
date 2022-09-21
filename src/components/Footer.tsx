@@ -1,9 +1,9 @@
-import React from 'react'
+import { Box } from "@chakra-ui/react"
 
-type Props = {}
-
-export default function Footer({}: Props) {
+export default function Footer() {
   return (
-    <div>Footer</div>
+    <Box as='footer'>
+      Footer
+    </Box>
   )
 }

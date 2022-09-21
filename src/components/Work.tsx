@@ -1,5 +1,10 @@
+import { Box } from "@chakra-ui/react"
+import { SectionTitle } from "./partials"
+
 export default function Work() {
   return (
-    <div>Work</div>
+    <Box as='section' id='mywork'>
+      <SectionTitle text='My Work' />
+    </Box>
   )
 }

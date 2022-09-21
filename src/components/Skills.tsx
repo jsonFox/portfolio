@@ -4,7 +4,7 @@ import { SkillIcon, SectionTitle } from "./partials";
 
 export default function Skills() {
   return (
-    <Box as='section'>
+    <Box as='section' id='skills'>
       <SectionTitle text='Skills' />
       <SimpleGrid as='article' minChildWidth='80px' spacing='30px'>
         <SkillIcon name='HTML' Icon={Html} />

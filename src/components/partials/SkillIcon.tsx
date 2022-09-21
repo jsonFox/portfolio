@@ -7,7 +7,6 @@ export default function SkillIcon({ Icon, name }: { Icon: IconType, name: string
       as='figure'
       direction='column'
       alignItems='center'
-      py={3}
     >
       {<Icon size="50px" />}
       <Text as='figcaption' textAlign='center' mt={2}>
