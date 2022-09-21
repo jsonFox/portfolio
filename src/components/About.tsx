@@ -18,9 +18,11 @@ export default function About() {
       h='100vh'
       direction='row'
       alignItems='center'
-      justifyContent='space-between'
     >
-      <Box transform='translateY(-8em)'>
+      <Box
+        minW={{ md: '425px', lg: '500px', xl: '50%' }}
+        transform='translateY(-8em)'
+      >
         <Text variant='colored' fontSize='2xl'>
           🙋‍♂️ Hi, my name is
         </Text>
@@ -54,7 +56,7 @@ export default function About() {
           src={portraitSrc}
           alt='Jason Fox'
           borderRadius='full'
-          h={{ md: '175px', lg: '200px' }}
+          h={{ md: '185px', lg: '215px' }}
           maxH='30%'
           transform='translateY(-8em)'
         />

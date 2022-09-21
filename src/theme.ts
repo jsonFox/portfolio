@@ -41,20 +41,30 @@ const overrides = extendTheme({
   },
   components: {
     Text: {
-      variants: { ...textVariants },
-    },
-    Heading: {
       variants: {
         ...textVariants,
-        'section': {
-          textDecoration: 'underline'
-        }
       },
+    },
+    Heading: {
+      baseStyle: {
+        display: 'flex',
+        flexDirection: 'column'
+      },
+      variants: {
+        ...textVariants,
+      },
+    },
+    Divider: {
+      baseStyle: {
+        opacity: 1,
+        borderColor: 'cyan.500',
+        borderWidth: '0.25rem',
+        mt: '-0.5rem'
+      }
     },
     Button: {
       baseStyle: {
         fontFamily: `'Overpass', sans-serif`,
-        bg: 'cyan.500',
         borderRadius: 3
       },
       variants: {
@@ -63,9 +73,22 @@ const overrides = extendTheme({
           ...btnProps(props),
           px: 10
         }),
-        defaultProps: {
-          bg: ''
-        }
+        'nav': (props: StyleFunctionProps) => ({
+          fontFamily: `'Open Sans', sans-serif`,
+          bg: 'none',
+          opacity: 0.8,
+          my: 0,
+          mx: 2,
+          p: 0,
+          h: '1.5rem',
+          borderRadius: 4,
+          borderBottom: '3px solid #00000000',
+          transition: '0.1s',
+          _hover: {
+            opacity: 1,
+            borderBottom: '3px solid #00B5D8'
+          }
+        }),
       }
     }
   }

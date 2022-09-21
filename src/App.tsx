@@ -19,8 +19,9 @@ function App() {
         as='main'
         direction='column'
         w='auto'
-        mx={{ md: '10vw', lg: '20vw' }}
+        mx={{ md: '10vw', lg: '15vw', xl: '20vw' }}
         px={6}
+        spacing={12}
       >
         <About />
         <Skills />

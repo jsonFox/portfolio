@@ -1,9 +1,12 @@
-import { Heading } from "@chakra-ui/react"
+import { Flex, Heading, Divider } from "@chakra-ui/react"
 
 export default function SectionTitle({ text }: { text: string }) {
   return (
-    <Heading as='h2' mb={4}>
-      {text}
-    </Heading>
+    <Flex mb={12}>
+      <Heading as='h2' variant='section'>
+        {text}
+        <Divider w='85%' />
+      </Heading>
+    </Flex>
   )
 }
