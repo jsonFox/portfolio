@@ -15,7 +15,13 @@ function App() {
       <Header sections={sections} />
       {/* Left Nav */}
       {/* Right Nav */}
-      <Stack as='main' direction='column' w='auto'>
+      <Stack
+        as='main'
+        direction='column'
+        w='auto'
+        mx={{ sm: 0, md: '20vw' }}
+        px={6}
+      >
         <About />
         <Skills />
         <Work />

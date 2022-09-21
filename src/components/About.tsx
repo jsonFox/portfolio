@@ -1,10 +1,17 @@
 import { Box, Heading, Text } from "@chakra-ui/react"
+import ReactTyped from "react-typed"
 
 export default function About() {
+  const titles = [
+    'Full-Stack Developer',
+    'Computer Science Grad',
+    'Cat Dad',
+    'Gaming Enthusiast'
+  ];
   return (
-    <Box as='section' id='about'>
+    <Box as='section' id='about' h='75vh'>
       <Text variant='colored' fontSize='2xl'>
-        Hi! 🙋‍♂️ My name is
+       🙋‍♂️ Hi, my name is
       </Text>
       <Heading as='h2' size='4xl' mb={1}>
         Jason Fox
@@ -14,7 +21,13 @@ export default function About() {
         variant='muted'
         size='xl'
       >
-        Full Stack Developer
+        <ReactTyped
+          strings={titles}
+          typeSpeed={40}
+          backSpeed={20}
+          startDelay={40}
+          loop
+        />
       </Heading>
     </Box>
   )
