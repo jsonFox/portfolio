@@ -34,9 +34,12 @@ const overrides = extendTheme({
       body: {
         fontFamily: 'body',
         color: mode('gray.800', 'whiteAlpha.900')(props),
-        bg: mode('gray.50', 'gray.900')(props),
+        bg: mode('gray.100', 'gray.900')(props),
         lineHeight: 'base',
       },
+      header: {
+        bg: mode('#F4F8FC', '#1A1C28')(props)
+      }
     }),
   },
   components: {
@@ -73,24 +76,31 @@ const overrides = extendTheme({
           ...btnProps(props),
           px: 10
         }),
-        'nav': (props: StyleFunctionProps) => ({
+        'nav': {
           fontFamily: `'Open Sans', sans-serif`,
           bg: 'none',
           opacity: 0.8,
-          my: 0,
-          mx: 2,
+          m: 0,
           p: 0,
           h: '1.5rem',
           borderRadius: 4,
           borderBottom: '3px solid #00000000',
-          transition: '0.1s',
+          transition: '0.s',
           _hover: {
             opacity: 1,
             borderBottom: '3px solid #00B5D8'
           }
-        }),
+        },
+        'toggle': (props: StyleFunctionProps) => ({
+          color: 'inherit',
+          border: mode('2px solid #00000033', '2px solid #FFFFFF33')(props),
+          borderRadius: 'full',
+          _hover: {
+            bg: mode('blackAlpha.100', 'whiteAlpha.50')(props)
+          }
+        })
       }
-    }
+    },
   }
 })
 

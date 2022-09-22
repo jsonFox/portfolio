@@ -15,13 +15,13 @@ export default function About() {
     <Flex
       as='section'
       id='about'
-      h='100vh'
+      h='90vh'
       direction='row'
       alignItems='center'
     >
       <Box
         minW={{ md: '425px', lg: '500px', xl: '50%' }}
-        transform='translateY(-8em)'
+        transform='translateY(-4em)'
       >
         <Text variant='colored' fontSize='2xl'>
           🙋‍♂️ Hi, my name is
@@ -58,7 +58,7 @@ export default function About() {
           borderRadius='full'
           h={{ md: '185px', lg: '215px' }}
           maxH='30%'
-          transform='translateY(-8em)'
+          transform='translateY(-4em)'
         />
       </Hide>
     </Flex>

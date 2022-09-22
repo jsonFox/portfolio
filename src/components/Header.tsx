@@ -8,13 +8,27 @@ export default function Header({ sections }: { sections: Array<string> }) {
     <Flex
       as='header'
       justifyContent='space-between'
+      position='sticky'
+      zIndex='9999'
+      top='0'
       w='100%'
-      py={1}
       px='10%'
+      py={4}
     >
       <Heading as='h1'>Jason Fox</Heading>
-      <Flex as='nav' justifyContent='space-evenly'>
-        <Stack as='ul' listStyleType='none' direction='row' alignItems='center'>
+      <Stack
+        as='nav'
+        direction='row'
+        justifyContent='space-evenly'
+        spacing={8}
+      >
+        <Stack
+          as='ul'
+          direction='row'
+          alignItems='center'
+          listStyleType='none'
+          spacing={{md: 4, lg: 6, xl: 8}}
+        >
           {sections.map((s: string, i: number) => (
             <li key={i}>
               <Button
@@ -27,11 +41,12 @@ export default function Header({ sections }: { sections: Array<string> }) {
           ))}
         </Stack>
         <IconButton
+        variant='toggle'
           aria-label='Toggle theme'
           icon={colorMode === 'light' ? <DarkMode /> : <LightMode />}
           onClick={toggleColorMode}
         />
-      </Flex>
+      </Stack>
     </Flex>
   )
 }

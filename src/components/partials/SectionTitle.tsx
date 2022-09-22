@@ -5,7 +5,7 @@ export default function SectionTitle({ text }: { text: string }) {
     <Flex mb={12}>
       <Heading as='h2' variant='section'>
         {text}
-        <Divider w='85%' />
+        <Divider ml='1%' w='85%' />
       </Heading>
     </Flex>
   )

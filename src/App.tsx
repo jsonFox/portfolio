@@ -21,7 +21,7 @@ function App() {
         w='auto'
         mx={{ md: '10vw', lg: '15vw', xl: '20vw' }}
         px={6}
-        spacing={12}
+        spacing={32}
       >
         <About />
         <Skills />
