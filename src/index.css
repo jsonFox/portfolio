@@ -18,8 +18,13 @@ body {
   max-width: 100%;
   min-height: 100vh;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 #root {
   width: 100%;
+}
+
+section {
+  scroll-margin-top: 5rem;
 }

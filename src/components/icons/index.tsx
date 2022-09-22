@@ -29,3 +29,7 @@ export {
   RiMoonClearLine as DarkMode,
   RiSunLine as LightMode,
 } from 'react-icons/ri'
+
+export {
+  CgAbstract as Logo,
+} from 'react-icons/cg'

@@ -38,6 +38,7 @@ const overrides = extendTheme({
         lineHeight: 'base',
       },
       header: {
+        color: mode('gray.800', 'whiteAlpha.900')(props),
         bg: mode('#F4F8FC', '#1A1C28')(props)
       }
     }),
@@ -56,6 +57,11 @@ const overrides = extendTheme({
       variants: {
         ...textVariants,
       },
+    },
+    DrawerContent: {
+      defaultProps: (props: StyleFunctionProps) => ({
+        bg: mode('#F4F8FC', '#1A1C28')(props)
+      })
     },
     Divider: {
       baseStyle: {
@@ -81,15 +87,28 @@ const overrides = extendTheme({
           bg: 'none',
           opacity: 0.8,
           m: 0,
-          p: 0,
+          py: 3,
+          px: 2,
           h: '1.5rem',
           borderRadius: 4,
           borderBottom: '3px solid #00000000',
-          transition: '0.s',
+          borderLeft: '3px solid #00000000',
+          borderRight: '3px solid #00000000',
+          borderTop: '3px solid #00000000',
+          transitionProperty: 'border-bottom, border-left, border-right, border-top',
+          transitionDuration: '0.8s',
+          transitionDelay: '0s, 0.1s, 0.3s, 0.2s',
           _hover: {
             opacity: 1,
-            borderBottom: '3px solid #00B5D8'
-          }
+            borderBottom: '3px solid #00B5D8',
+            borderLeft: '3px solid #00B5D8',
+            borderRight: '3px solid #00B5D8',
+            borderTop: '3px solid #00B5D8',
+          },
+          _active: {
+            borderLeft: '3px solid #00000000',
+            borderRight: '3px solid #00000000',
+          },
         },
         'toggle': (props: StyleFunctionProps) => ({
           color: 'inherit',
