@@ -31,5 +31,9 @@ export {
 } from 'react-icons/ri'
 
 export {
+  BsCircleFill as Circle,
+} from 'react-icons/bs'
+
+export {
   CgAbstract as Logo,
 } from 'react-icons/cg'
