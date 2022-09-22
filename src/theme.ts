@@ -12,10 +12,10 @@ const textVariants = {
 }
 
 const btnProps = (props: StyleFunctionProps) => ({
-  px: 6,
-  py: 6,
   bg: 'cyan.500',
   color: mode('gray.50', 'gray.900')(props),
+  display: 'flex',
+  alignItems: 'center',
   _hover: {
     bg: 'cyan.700'
   },
@@ -78,8 +78,11 @@ const overrides = extendTheme({
       },
       variants: {
         solid: btnProps,
+        px: 6,
+        py: 6,
         'wide': (props: StyleFunctionProps) => ({
           ...btnProps(props),
+          py: 6,
           px: 10
         }),
         'nav': {
@@ -104,9 +107,21 @@ const overrides = extendTheme({
           _hover: {
             bg: mode('blackAlpha.100', 'whiteAlpha.50')(props)
           }
-        })
+        }),
+        'project': (props: StyleFunctionProps) => ({
+          ...btnProps(props),
+          bg: 'cyan.600',
+        }),
       }
     },
+    Tag: {
+      variants: {
+        subtle: (props: StyleFunctionProps) => ({
+          bg: mode('red', 'blue')(props),
+          borderRadius: '0 !important'
+        })
+      }
+    }
   }
 })
 

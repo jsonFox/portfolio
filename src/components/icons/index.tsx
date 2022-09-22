@@ -37,3 +37,7 @@ export {
 export {
   CgAbstract as Logo,
 } from 'react-icons/cg'
+
+export {
+  FiExternalLink as ExternalLink
+} from 'react-icons/fi'

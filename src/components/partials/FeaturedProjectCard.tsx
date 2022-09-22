@@ -1,41 +1,78 @@
 import { useState } from 'react';
 import {
-  Box, Stack, Flex,
+  Box, Stack, Flex, Container,
   Heading, Text, Image, Button,
-  Tag, Skeleton,
+  Tag, Skeleton, Divider,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { Circle } from '../icons';
+import { Circle, Github, ExternalLink } from '../icons';
 
 type Props = {
   imageUrl: string,
-  desktop: boolean,
+  mobile: boolean,
   title: string,
-  description: string,
   tags: Array<string>,
+  description: string,
   liveUrl?: string,
   sourceUrl?: string,
 }
 
-export default function FeaturedProjectCard({ imageUrl, desktop, title, description, tags, liveUrl, sourceUrl }: Props) {
+export default function FeaturedProjectCard({ imageUrl, mobile, title, tags, description, liveUrl, sourceUrl }: Props) {
   const cardBg = useColorModeValue('#0BC5EA22', 'whiteAlpha.50');
-  const displayProps = { imageUrl, title }
-  return (desktop ?
+  const displayProps = { imageUrl, title };
+  return (
     <Box
       bg={cardBg}
-      p={6}
+      p={4}
       borderRadius={4}
-    >
-      <Stack>
-        {desktop ?
-          <DesktopDisplay {...displayProps} /> :
-          <MobileDisplay {...displayProps} />
-        }
-      </Stack>
-    </Box> :
-    <Box>
 
-    </Box>
+    >
+      <Flex
+        direction='row'
+        flexWrap='wrap'
+        justifyContent='space-between'
+        minH='310px'
+      >
+        <Flex w={{ lg: '45%' }} my='auto' minH='100%'>
+          {mobile ?
+            <MobileDisplay {...displayProps} /> :
+            <DesktopDisplay {...displayProps} />
+          }
+        </Flex>
+        <Stack w={{ lg: '45%' }} pr={{ lg: 8 }}>
+          <Stack as='article' direction='column' spacing={4}>
+            <Heading as='h4' size='lg' display='flex'>
+              {title}
+              <Divider ml='1%' w='1.5rem' />
+            </Heading>
+            <Stack direction='row' flexWrap='wrap'>
+              {tags.map((tag: string) => (
+                <Tag key={tag} borderRadius='0.15rem' bg={'#8899CC33'}>
+                  {tag.replaceAll(' ', '\u00A0')}
+                </Tag>
+              ))}
+            </Stack>
+            <Text pr={{ xl: 8 }}>
+              {description}
+            </Text>
+            <Stack direction='row'>
+              {liveUrl &&
+                <Button as='a' href={liveUrl} target='_blank' variant='project'>
+                  <ExternalLink fontSize='1.5rem' />
+                  <Text ml='0.5rem' pt={1}>Live</Text>
+                </Button>
+              }
+              {sourceUrl &&
+                <Button as='a' href={sourceUrl} target='_blank' variant='project'>
+                  <Github fontSize='1.5rem' />
+                  <Text ml='0.5rem' pt={1}>Source</Text>
+                </Button>
+              }
+            </Stack>
+          </Stack>
+        </Stack>
+      </Flex >
+    </Box >
   )
 }
 
@@ -46,14 +83,25 @@ type displayProps = {
 
 function MobileDisplay({ imageUrl, title }: displayProps) {
   const [isLoaded, setIsLoaded] = useState(false);
-  const bgColor = useColorModeValue('#E9E7E8', '#3C3D3F');
+  const phoneBg = useColorModeValue('#F2F2F2', '#0F0F0F');
   return (
-    <Box borderRadius={5} overflow='hidden'>
+    <Box
+      bg={phoneBg}
+      py={{ base: 2, md: 3, lg: 4 }}
+      px={1}
+      borderRadius={{ base: 6, md: 8, lg: 10 }}
+      overflow='hidden'
+      maxW='max-content'
+      m='auto'
+    >
       <Skeleton isLoaded={isLoaded}>
         <Image
           onLoad={() => setIsLoaded(true)}
           src={imageUrl}
           alt={title}
+          maxH={{ base: '150px', md: '200px', lg: '250px' }}
+          w='auto'
+          borderRadius={{ base: 4, md: 5, lg: 6 }}
         />
       </Skeleton>
     </Box>
@@ -62,20 +110,24 @@ function MobileDisplay({ imageUrl, title }: displayProps) {
 
 function DesktopDisplay({ imageUrl, title }: displayProps) {
   const [isLoaded, setIsLoaded] = useState(false);
-  const browserBar = useColorModeValue('#E9E7E8', '#3C3D3F');
+  const browserBg = useColorModeValue('#E9E7E8', '#3C3D3F');
   return (
-    <Box borderRadius={5} overflow='hidden'>
+    <Box
+      borderRadius={3}
+      overflow='hidden'
+      m='auto'
+    >
       <Flex
         pointerEvents='none'
-        minH={5}
-        bg={browserBar}
+        minH={{ base: 3, lg: 4 }}
+        bg={browserBg}
         alignItems='center'
-        px={2}
+        pl={{ base: 1, lg: 2 }}
       >
-        <Stack direction='row'>
-          <Circle size={10} color='#FF6660' />
-          <Circle size={10} color='#EEBF3B' />
-          <Circle size={10} color='#34C355' />
+        <Stack direction='row' spacing='1.5%' alignItems='center'>
+          <Circle size='2%' color='#FF6660' />
+          <Circle size='2%' color='#EEBF3B' />
+          <Circle size='2%' color='#34C355' />
         </Stack>
       </Flex>
       <Skeleton isLoaded={isLoaded}>
