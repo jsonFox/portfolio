@@ -45,8 +45,9 @@ export default function About() {
         </Heading>
         <Button
           variant='wide'
-          mt={4}
           onClick={() => scrollTo('mywork')}
+          fontSize='lg'
+          mt={4}
         >
           See my work
         </Button>
