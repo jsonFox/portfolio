@@ -8,7 +8,6 @@ const sections: Array<string> = [
   'Contact Me'
 ]
 
-
 function App() {
   return (
     <>

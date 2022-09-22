@@ -27,4 +27,5 @@ body {
 
 section {
   scroll-margin-top: 5rem;
+  min-height: 40vh;
 }
