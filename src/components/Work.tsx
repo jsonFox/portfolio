@@ -5,17 +5,20 @@ import cbUrl from '../assets/chopping-block-project.png';
 
 const featuredProjects = [
   {
+    imageUrl: wtlUrl,
+    desktop: true,
     title: 'Worlds Tier List Maker',
     description: 'Clean and simple tier list maker for League of Legends Worlds 2022 teams with filters and rendered image/text output.',
-    imageUrl: wtlUrl,
+    format: 'desktop',
     tags: ['React'],
     liveUrl: '',
     sourceUrl: '',
   },
   {
+    imageUrl: cbUrl,
+    desktop: false,
     title: '',
     description: '',
-    imageUrl: '',
     tags: [''],
     liveUrl: '',
     sourceUrl: '',
