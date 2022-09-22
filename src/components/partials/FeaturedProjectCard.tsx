@@ -21,16 +21,12 @@ export default function FeaturedProjectCard({ imageUrl, mobile, title, tags, des
   const cardBg = useColorModeValue('#0BC5EA22', 'whiteAlpha.50');
   const displayProps = { imageUrl, title };
   return (
-    <Box
-      bg={cardBg}
-      p={4}
-      borderRadius={4}
-
-    >
+    <Box bg={cardBg} p={4} borderRadius={4} >
       <Flex
         direction='row'
         flexWrap='wrap'
         justifyContent='space-between'
+        alignItems='center'
         minH='310px'
       >
         <Flex w={{ lg: '45%' }} my='auto' minH='100%'>
