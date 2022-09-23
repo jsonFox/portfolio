@@ -6,6 +6,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import { Circle, Github, ExternalLink } from '../icons';
+import ProjectTitle from './ProjectTitle';
 
 type Props = {
   imageUrl: string,
@@ -35,10 +36,7 @@ export default function FeaturedProjectCard({ imageUrl, mobile, title, tags, des
         </Flex>
         <Stack w={{ lg: '45%' }} pr={{ lg: 8 }}>
           <Stack as='article' direction='column' spacing={4}>
-            <Heading as='h4' size='lg' display='flex'>
-              {title}
-              <Divider ml='0.5%' w='1.2rem' />
-            </Heading>
+            <ProjectTitle text={title} featured />
             <Stack direction='row' flexWrap='wrap'>
               {tags.map((tag: string) => (
                 <Tag key={tag} borderRadius='0.15rem' bg={'#8899CC33'}>

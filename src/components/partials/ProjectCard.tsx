@@ -1,10 +1,10 @@
 import {
-  Box, Stack, Flex,
+  Box, Stack,
   Heading, Text, Button,
   Tag, Divider,
-  useColorModeValue,
 } from '@chakra-ui/react';
 import { Github, ExternalLink } from '../icons';
+import ProjectTitle from './ProjectTitle';
 
 type Props = {
   title: string,
@@ -18,10 +18,7 @@ export default function ProjectCard({ title, tags, description, liveUrl, sourceU
   return (
     <Box bg='#0BC5EA10' p={4} borderRadius={2} >
       <Stack as='article' direction='column' spacing={4} h='100%'>
-        <Heading as='h4' size='lg' display='flex'>
-          {title}
-          <Divider ml='0.5%' w='1.2rem' />
-        </Heading>
+        <ProjectTitle text={title} />
         <Stack direction='row' flexWrap='wrap'>
           {tags.map((tag: string) => (
             <Tag key={tag} borderRadius='0.15rem' bg={'#8899CC33'}>
