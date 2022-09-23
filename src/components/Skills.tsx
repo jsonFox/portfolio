@@ -21,7 +21,7 @@ export default function Skills() {
         <SkillIcon name='CSS' Icon={Css} />
         <SkillIcon name='JavaScript' Icon={Javascript} />
         <SkillIcon name='TypeScript' Icon={Typescript} />
-        <SkillIcon name='JQuery' Icon={Jquery} />
+        <SkillIcon name='jQuery' Icon={Jquery} />
         <SkillIcon name='Jest' Icon={Jest} />
         <SkillIcon name='Bootstrap' Icon={Bootstrap} />
         <SkillIcon name='GraphQL' Icon={Graphql} />
