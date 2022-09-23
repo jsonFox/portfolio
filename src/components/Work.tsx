@@ -24,6 +24,37 @@ const featuredProjects = [
   },
 ]
 
+const projects = [
+  {
+    title: 'Gankbait',
+    tags: ['Express', 'Pug', 'Bulma', 'OAuth2', 'JWT'],
+    description: 'SPA for analyzing match timeline data from the Riot League of Legends match API.',
+    liveUrl: 'https://frightened-hat-colt.cyclic.app/',
+    sourceUrl: 'https://github.com/JtheFox/gankbait',
+  },
+  {
+    title: 'Rosiebot',
+    tags: ['Discordjs', 'Sequelize', 'Bootstrap', 'AWS'],
+    description: 'Your friendly neighborhood Discord c(h)atbot.',
+    liveUrl: 'https://jthefox.github.io/rosiebot/',
+    sourceUrl: 'https://github.com/JtheFox/rosiebot',
+  },
+  {
+    title: 'Blastoff',
+    tags: ['Express', 'Sequelize', 'Handlebars', 'Bulma'],
+    description: 'SpaceX launch information display using SpaceX API.',
+    liveUrl: 'https://blastoff2.herokuapp.com/',
+    sourceUrl: 'https://github.com/JtheFox/blastoff',
+  },
+  {
+    title: 'Password Generator',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    description: 'Generate a secure password with the click of a button.',
+    liveUrl: 'https://jthefox.github.io/password-generator/',
+    sourceUrl: 'https://github.com/JtheFox/password-generator',
+  },
+]
+
 export default function Work() {
   return (
     <Box as='section' id='mywork'>
@@ -32,8 +63,12 @@ export default function Work() {
         {featuredProjects.map((p, i) => (
           <FeaturedProjectCard key={i} {...p} />
         ))}
+        <SimpleGrid columns={3} gap={4}>
+          {projects.map((p, i) => (
+            <ProjectCard key={i} {...p} />
+          ))}
+        </SimpleGrid>
       </Stack>
-      <ProjectCard />
     </Box>
   )
 }

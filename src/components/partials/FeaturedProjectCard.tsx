@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {
-  Box, Stack, Flex, Container,
+  Box, Stack, Flex,
   Heading, Text, Image, Button,
   Tag, Skeleton, Divider,
   useColorModeValue,
@@ -18,16 +18,14 @@ type Props = {
 }
 
 export default function FeaturedProjectCard({ imageUrl, mobile, title, tags, description, liveUrl, sourceUrl }: Props) {
-  const cardBg = useColorModeValue('#0BC5EA22', 'whiteAlpha.50');
   const displayProps = { imageUrl, title };
   return (
-    <Box bg={cardBg} p={4} borderRadius={4} >
+    <Box bg='#0BC5EA10' p={4} borderRadius={4} >
       <Flex
         direction='row'
         flexWrap='wrap'
         justifyContent='space-between'
         alignItems='center'
-        minH='310px'
       >
         <Flex w={{ lg: '45%' }} my='auto' minH='100%'>
           {mobile ?
@@ -39,7 +37,7 @@ export default function FeaturedProjectCard({ imageUrl, mobile, title, tags, des
           <Stack as='article' direction='column' spacing={4}>
             <Heading as='h4' size='lg' display='flex'>
               {title}
-              <Divider ml='1%' w='1.5rem' />
+              <Divider ml='0.5%' w='1.5rem' />
             </Heading>
             <Stack direction='row' flexWrap='wrap'>
               {tags.map((tag: string) => (
