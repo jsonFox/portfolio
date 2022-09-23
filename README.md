@@ -1,5 +1,5 @@
 TODO:
-- Project Card
+- Align buttons to bottom of project cards
 - Contact section
 - Footer
 - Add Skeleton to portrait image
