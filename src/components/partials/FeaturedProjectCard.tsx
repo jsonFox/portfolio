@@ -44,7 +44,7 @@ export default function FeaturedProjectCard({ imageUrl, mobile, title, tags, des
                 </Tag>
               ))}
             </Stack>
-            <Text pr={{ xl: 8 }}>
+            <Text maxW={{ lg: '90%', xl: '75%' }}>
               {description}
             </Text>
             <Stack direction='row'>
