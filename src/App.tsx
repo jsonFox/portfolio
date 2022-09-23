@@ -7,27 +7,6 @@ import {
 } from "./components";
 import { motion } from "framer-motion";
 
-function Animated({ children }: { children: JSX.Element }) {
-  return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: false }}
-      variants={{
-        hidden: { opacity: 0 },
-        visible: {
-          opacity: 1,
-          transition: {
-            duration: 0.5
-          }
-        }
-      }}
-    >
-      {children}
-    </motion.div>
-  )
-}
-
 const sections: Array<string> = [
   'Home',
   'About',
@@ -36,7 +15,7 @@ const sections: Array<string> = [
   'Contact Me'
 ]
 
-function App() {
+export default function App() {
   return (
     <>
       <Header sections={sections} />
@@ -69,4 +48,23 @@ function App() {
   )
 }
 
-export default App;
+function Animated({ children }: { children: JSX.Element }) {
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false }}
+      variants={{
+        hidden: { opacity: 0 },
+        visible: {
+          opacity: 1,
+          transition: {
+            duration: 0.5
+          }
+        }
+      }}
+    >
+      {children}
+    </motion.div>
+  )
+}

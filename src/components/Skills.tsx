@@ -1,10 +1,11 @@
-import { Box, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/react";
+import { IconType } from "react-icons/lib";
 import {
   Html, Css, Javascript, Jest, Typescript,
   Bootstrap, Node, React, Express, Pug,
   Graphql, Mysql, Mongodb, Aws
 } from "./icons";
-import { SkillIcon, SectionTitle } from "./partials";
+import { SectionTitle } from "./partials";
 
 export default function Skills() {
   return (
@@ -35,5 +36,20 @@ export default function Skills() {
         </Text>
       </SimpleGrid>
     </Box>
+  )
+}
+
+function SkillIcon({ Icon, name }: { Icon: IconType, name: string }) {
+  return (
+    <Flex
+      as='figure'
+      direction='column'
+      alignItems='center'
+    >
+      {<Icon size="50px" />}
+      <Text as='figcaption' textAlign='center' mt={2}>
+        {name}
+      </Text>
+    </Flex>
   )
 }
