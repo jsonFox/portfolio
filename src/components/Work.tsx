@@ -26,6 +26,13 @@ const featuredProjects = [
 
 const projects = [
   {
+    title: 'Portfolio',
+    tags: ['TypeScript', 'React', 'Chakra UI'],
+    description: 'My portfolio. You\'re already here!',
+    liveUrl: '',
+    sourceUrl: 'https://github.com/jthefox/portfolio',
+  },
+  {
     title: 'Gankbait',
     tags: ['Express', 'Pug', 'Bulma', 'OAuth2', 'JWT'],
     description: 'SPA for analyzing match timeline data from the Riot League of Legends match API.',
