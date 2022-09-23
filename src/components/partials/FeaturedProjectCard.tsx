@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import {
   Box, Stack, Flex,
-  Heading, Text, Image, Button,
-  Tag, Skeleton, Divider,
+  Text, Image, Button,
+  Tag, Skeleton,
   useColorModeValue,
 } from '@chakra-ui/react';
 import { Circle, Github, ExternalLink } from '../icons';

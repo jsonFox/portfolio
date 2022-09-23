@@ -1,5 +1,9 @@
-import { Flex, Box, Stack } from "@chakra-ui/react";
-import { Header, About, Skills, Work, Contact, Footer } from "./components";
+import { Stack } from "@chakra-ui/react";
+import {
+  Header,
+  Home, Skills, Work, Contact,
+  Footer
+} from "./components";
 
 const sections: Array<string> = [
   'About',
@@ -22,7 +26,7 @@ function App() {
         px={6}
         spacing={{ base: 16, md: 24, lg: 32 }}
       >
-        <About />
+        <Home />
         <Skills />
         <Work />
         <Contact />

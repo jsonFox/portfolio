@@ -1,4 +1,8 @@
-import { Box, Stack, Divider, Text, Link, useColorModeValue } from "@chakra-ui/react"
+import {
+  Box, Stack,
+  Text, Link, Divider,
+  useColorModeValue
+} from "@chakra-ui/react"
 
 export default function Footer() {
   const dividerColor = useColorModeValue('blackAlpha.100', 'whiteAlpha.50');

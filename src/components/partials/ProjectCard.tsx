@@ -1,7 +1,6 @@
 import {
   Box, Stack,
-  Heading, Text, Button,
-  Tag, Divider,
+  Text, Button, Tag,
 } from '@chakra-ui/react';
 import { Github, ExternalLink } from '../icons';
 import ProjectTitle from './ProjectTitle';

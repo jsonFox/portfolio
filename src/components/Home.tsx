@@ -1,9 +1,12 @@
-import { Flex, Box, Heading, Text, Button, Image, Hide } from "@chakra-ui/react";
+import {
+  Flex, Box, Hide,
+  Heading, Text, Button, Image
+} from "@chakra-ui/react";
 import ReactTypingEffect from 'react-typing-effect';
 import portraitSrc from '../assets/portrait.png';
 import { scrollTo } from "../utils";
 
-export default function About() {
+export default function Home() {
   const titles = [
     'Full-Stack Developer',
     'Comp Sci Graduate',
