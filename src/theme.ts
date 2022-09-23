@@ -1,6 +1,6 @@
-import { extendTheme } from '@chakra-ui/react'
-import { mode } from '@chakra-ui/theme-tools'
-import type { StyleFunctionProps } from '@chakra-ui/styled-system'
+import { extendTheme } from '@chakra-ui/react';
+import { mode } from '@chakra-ui/theme-tools';
+import type { StyleFunctionProps } from '@chakra-ui/styled-system';
 
 const textVariants = {
   'muted': (props: StyleFunctionProps) => ({
@@ -38,8 +38,8 @@ const overrides = extendTheme({
         lineHeight: 'base',
       },
       header: {
-        color: mode('gray.800', 'whiteAlpha.900')(props),
-        bg: mode('#F4F8FC', '#1A1C28')(props)
+        color: 'inherit',
+        bg: mode('#F4F7F9', '#1A1C28')(props)
       }
     }),
   },

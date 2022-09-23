@@ -26,7 +26,7 @@ export default function Home() {
       alignItems='center'
     >
       <Box
-        minW={{ md: '425px', lg: '500px', xl: '50%' }}
+        minW={{ md: '60%', lg: '50%', xl: '40%' }}
         {...offset}
       >
         <Text variant='colored' fontSize='2xl'>
@@ -69,8 +69,8 @@ export default function Home() {
             src={portraitSrc}
             alt='Jason Fox'
             borderRadius='full'
-            h={{ md: '185px', lg: '215px' }}
-            maxH='30%'
+            w={{ base: '185px', lg: '215px' }}
+            h='auto'
             onLoad={() => setIsLoaded(true)}
           />
         </Skeleton>

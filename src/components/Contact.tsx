@@ -1,6 +1,6 @@
 import { Box, Stack, Link } from "@chakra-ui/react";
 import { SectionTitle } from "./partials";
-import { Email, LinkedinSquare, GithubSquare } from "./icons";
+import { Email, Linkedin, GithubSquare } from "./icons";
 
 export default function Contact() {
   return (
@@ -12,7 +12,7 @@ export default function Contact() {
           <Link href='mailto:jfox0096@gmail.com'>jfox0096@gmail.com</Link>
         </Info>
         <Info>
-          <LinkedinSquare size={32} />
+          <Linkedin size={32} />
           <Link href='https://www.linkedin.com/in/jasonfox96'>/jasonfox96</Link>
         </Info>
         <Info>

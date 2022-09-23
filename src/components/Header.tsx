@@ -86,6 +86,7 @@ export default function Header({ sections }: { sections: Array<string> }) {
               as={Logo}
               w={{ base: '32px', md: '40px', lg: '44px', xl: '48px' }}
               h={{ base: '32px', md: '40px', lg: '44px', xl: '48px' }}
+              mr={{ base: 1, md: 2, lg: 3 }}
             />
             <Text
               as='h1'

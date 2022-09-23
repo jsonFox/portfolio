@@ -5,13 +5,10 @@ export {
   FaGithub as Github,
   FaGithubSquare as GithubSquare,
   FaHtml5 as Html,
-  FaLinkedinIn as Linkedin,
-  FaLinkedin as LinkedinSquare,
+  FaLinkedin as Linkedin,
   FaNodeJs as Node,
   FaReact as React,
   FaSlack as Slack,
-  FaTwitter as Twitter,
-  FaTwitterSquare as TwitterSquare,
 } from 'react-icons/fa'
 
 export {
