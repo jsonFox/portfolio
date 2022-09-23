@@ -20,7 +20,7 @@ export default function ProjectCard({ title, tags, description, liveUrl, sourceU
       <Stack as='article' direction='column' spacing={4} h='100%'>
         <Heading as='h4' size='lg' display='flex'>
           {title}
-          <Divider ml='0.5%' w='1.5rem' />
+          <Divider ml='0.5%' w='1.2rem' />
         </Heading>
         <Stack direction='row' flexWrap='wrap'>
           {tags.map((tag: string) => (

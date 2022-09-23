@@ -37,7 +37,7 @@ export default function FeaturedProjectCard({ imageUrl, mobile, title, tags, des
           <Stack as='article' direction='column' spacing={4}>
             <Heading as='h4' size='lg' display='flex'>
               {title}
-              <Divider ml='0.5%' w='1.5rem' />
+              <Divider ml='0.5%' w='1.2rem' />
             </Heading>
             <Stack direction='row' flexWrap='wrap'>
               {tags.map((tag: string) => (
@@ -87,6 +87,7 @@ function MobileDisplay({ imageUrl, title }: displayProps) {
       overflow='hidden'
       maxW='max-content'
       m='auto'
+      outline='1px solid #22222222'
     >
       <Skeleton isLoaded={isLoaded}>
         <Image
@@ -110,6 +111,7 @@ function DesktopDisplay({ imageUrl, title }: displayProps) {
       borderRadius={3}
       overflow='hidden'
       m='auto'
+      outline='1px solid #22222222'
     >
       <Flex
         pointerEvents='none'
