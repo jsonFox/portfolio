@@ -69,7 +69,7 @@ const overrides = extendTheme({
         borderColor: 'cyan.500',
         borderWidth: '0.25rem',
         mt: '-0.5rem',
-      }
+      },
     },
     Button: {
       baseStyle: {
