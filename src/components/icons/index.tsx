@@ -19,6 +19,7 @@ export {
   SiGraphql as Graphql,
   SiJavascript as Javascript,
   SiJest as Jest,
+  SiJquery as Jquery,
   SiMongodb as Mongodb,
   SiMysql as Mysql,
   SiPug as Pug,

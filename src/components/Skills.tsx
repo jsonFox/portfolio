@@ -1,9 +1,9 @@
 import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import { IconType } from "react-icons/lib";
 import {
-  Html, Css, Javascript, Jest, Typescript,
-  Bootstrap, Node, React, Express, Pug,
-  Graphql, Mysql, Mongodb, Aws
+  Html, Css, Javascript, Typescript, Jquery, Jest,
+  Bootstrap, Graphql, Node, React, Express, Pug,
+  Mysql, Mongodb, Aws
 } from "./icons";
 import { SectionTitle } from "./partials";
 
@@ -20,14 +20,15 @@ export default function Skills() {
         <SkillIcon name='HTML' Icon={Html} />
         <SkillIcon name='CSS' Icon={Css} />
         <SkillIcon name='JavaScript' Icon={Javascript} />
-        <SkillIcon name='Jest' Icon={Jest} />
         <SkillIcon name='TypeScript' Icon={Typescript} />
+        <SkillIcon name='JQuery' Icon={Jquery} />
+        <SkillIcon name='Jest' Icon={Jest} />
         <SkillIcon name='Bootstrap' Icon={Bootstrap} />
+        <SkillIcon name='GraphQL' Icon={Graphql} />
         <SkillIcon name='NodeJS' Icon={Node} />
         <SkillIcon name='React' Icon={React} />
         <SkillIcon name='ExpressJS' Icon={Express} />
         <SkillIcon name='Pug' Icon={Pug} />
-        <SkillIcon name='GraphQL' Icon={Graphql} />
         <SkillIcon name='MySQL' Icon={Mysql} />
         <SkillIcon name='MongoDB' Icon={Mongodb} />
         <SkillIcon name='AWS' Icon={Aws} />
