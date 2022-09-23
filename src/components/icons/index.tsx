@@ -41,3 +41,7 @@ export {
 export {
   FiExternalLink as ExternalLink
 } from 'react-icons/fi'
+
+export {
+  HiOutlineMail as Email
+} from 'react-icons/hi'
