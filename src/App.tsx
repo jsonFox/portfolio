@@ -5,6 +5,28 @@ import {
   About, Skills, Work, Contact,
   Footer
 } from "./components";
+import { motion } from "framer-motion";
+
+function Animated({ children }: { children: JSX.Element }) {
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false }}
+      variants={{
+        hidden: { opacity: 0 },
+        visible: {
+          opacity: 1,
+          transition: {
+            duration: 0.5
+          }
+        }
+      }}
+    >
+      {children}
+    </motion.div>
+  )
+}
 
 const sections: Array<string> = [
   'Home',
@@ -26,15 +48,25 @@ function App() {
         px={6}
         spacing={{ base: 16, md: 24, lg: 32 }}
       >
-        <Home />
-        <About />
-        <Skills />
-        <Work />
-        <Contact />
+        <Animated>
+          <Home />
+        </Animated>
+        <Animated>
+          <About />
+        </Animated>
+        <Animated>
+          <Skills />
+        </Animated>
+        <Animated>
+          <Work />
+        </Animated>
+        <Animated>
+          <Contact />
+        </Animated>
         <Footer />
       </Stack>
     </>
   )
 }
 
-export default App
+export default App;
