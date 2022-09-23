@@ -63,7 +63,7 @@ export default function Work() {
         {featuredProjects.map((p, i) => (
           <FeaturedProjectCard key={i} {...p} />
         ))}
-        <SimpleGrid columns={3} gap={4}>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={4}>
           {projects.map((p, i) => (
             <ProjectCard key={i} {...p} />
           ))}
