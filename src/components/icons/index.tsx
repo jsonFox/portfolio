@@ -35,8 +35,8 @@ export {
 } from 'react-icons/bs'
 
 export {
-  CgAbstract as Logo,
-} from 'react-icons/cg'
+  GiFox as Logo,
+} from 'react-icons/gi'
 
 export {
   FiExternalLink as ExternalLink

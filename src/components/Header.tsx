@@ -78,7 +78,6 @@ export default function Header({ sections }: { sections: Array<string> }) {
         <Flex alignItems='center'>
           <Icon
             as={Logo}
-            color={'cyan.500'}
             w={{ base: '32px', md: '40px', lg: '44px', xl: '48px' }}
             h={{ base: '32px', md: '40px', lg: '44px', xl: '48px' }}
           />
