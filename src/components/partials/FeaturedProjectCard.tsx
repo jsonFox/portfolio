@@ -21,7 +21,7 @@ type Props = {
 export default function FeaturedProjectCard({ imageUrl, mobile, title, tags, description, liveUrl, sourceUrl }: Props) {
   const displayProps = { imageUrl, title };
   return (
-    <Box bg='#0BC5EA10' p={4} borderRadius={4} >
+    <Box bg='#0BC5EA10' p={4} borderRadius={4}>
       <Flex
         direction='row'
         flexWrap='wrap'

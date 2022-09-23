@@ -15,7 +15,7 @@ type Props = {
 
 export default function ProjectCard({ title, tags, description, liveUrl, sourceUrl }: Props) {
   return (
-    <Box bg='#0BC5EA10' p={4} borderRadius={2} >
+    <Box bg='#0BC5EA10' p={6} borderRadius={2} h='100%'>
       <Stack as='article' direction='column' spacing={4} h='100%'>
         <ProjectTitle text={title} />
         <Stack direction='row' flexWrap='wrap'>
@@ -25,10 +25,10 @@ export default function ProjectCard({ title, tags, description, liveUrl, sourceU
             </Tag>
           ))}
         </Stack>
-        <Text pr={{ xl: 8 }}>
+        <Text pr={{ xl: 8 }} flex={1}>
           {description}
         </Text>
-        <Stack direction='row'>
+        <Stack direction='row' mt='auto'>
           {liveUrl &&
             <Button as='a' href={liveUrl} target='_blank' variant='project'>
               <ExternalLink fontSize='1.5rem' />

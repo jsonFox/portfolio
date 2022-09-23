@@ -24,7 +24,7 @@ function App() {
         as='main'
         direction='column'
         w='auto'
-        mx={{ md: '2vw', lg: '5vw', xl: '15vw' }}
+        mx={{ md: '2vw', lg: '5vw', xl: '13vw' }}
         px={6}
         spacing={{ base: 16, md: 24, lg: 32 }}
       >
