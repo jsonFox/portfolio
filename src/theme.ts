@@ -45,6 +45,9 @@ const overrides = extendTheme({
   },
   components: {
     Text: {
+      baseStyle: {
+        textAlign: { md: 'justify' },
+      },
       variants: {
         ...textVariants,
       },

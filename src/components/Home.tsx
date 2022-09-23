@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <Flex
       as='section'
-      id='about'
+      id='home'
       h='90vh'
       direction='row'
       alignItems='center'
