@@ -1,5 +1,6 @@
+import { useState } from "react";
 import {
-  Flex, Box, Hide,
+  Flex, Box, Hide, Skeleton,
   Heading, Text, Button, Image
 } from "@chakra-ui/react";
 import ReactTypingEffect from 'react-typing-effect';
@@ -7,6 +8,7 @@ import portraitSrc from '../assets/portrait.png';
 import { scrollTo } from "../utils";
 
 export default function Home() {
+  const [isLoaded, setIsLoaded] = useState(false);
   const titles = [
     'Full-Stack Developer',
     'Comp Sci Graduate',
@@ -14,6 +16,7 @@ export default function Home() {
     'Gamer',
     'Coding Hobbyist',
   ];
+  const offset = { transform: 'translateY(-4em)' }
   return (
     <Flex
       as='section'
@@ -24,7 +27,7 @@ export default function Home() {
     >
       <Box
         minW={{ md: '425px', lg: '500px', xl: '50%' }}
-        transform='translateY(-4em)'
+        {...offset}
       >
         <Text variant='colored' fontSize='2xl'>
           🙋‍♂️ Hi, my name is
@@ -37,6 +40,7 @@ export default function Home() {
           variant='muted'
           size='xl'
           noOfLines={1}
+          userSelect='none'
         >
           <ReactTypingEffect
             text={titles}
@@ -56,14 +60,20 @@ export default function Home() {
         </Button>
       </Box>
       <Hide below='sm'>
-        <Image
-          src={portraitSrc}
-          alt='Jason Fox'
+        <Skeleton
+          isLoaded={isLoaded}
           borderRadius='full'
-          h={{ md: '185px', lg: '215px' }}
-          maxH='30%'
-          transform='translateY(-4em)'
-        />
+          {...offset}
+        >
+          <Image
+            src={portraitSrc}
+            alt='Jason Fox'
+            borderRadius='full'
+            h={{ md: '185px', lg: '215px' }}
+            maxH='30%'
+            onLoad={() => setIsLoaded(true)}
+          />
+        </Skeleton>
       </Hide>
     </Flex>
   )

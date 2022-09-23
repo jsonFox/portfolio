@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {
-  Box, Flex, Stack,
-  Text, Link, Skeleton, Image
+  Box, Flex, Stack, Skeleton,
+  Text, Link, Image
 } from "@chakra-ui/react";
 import { SectionTitle } from "./partials";
 import { getElementDimensions } from "../utils";

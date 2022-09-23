@@ -18,8 +18,6 @@ function App() {
   return (
     <>
       <Header sections={sections} />
-      {/* Left Nav */}
-      {/* Right Nav */}
       <Stack
         as='main'
         direction='column'
