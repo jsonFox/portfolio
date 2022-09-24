@@ -26,7 +26,7 @@ export default function Home() {
       alignItems='center'
     >
       <Box
-        minW={{ md: '60%', lg: '50%', xl: '40%' }}
+        minW={{ base: '325px', md: '60%', lg: '50%', xl: '40%' }}
         {...offset}
       >
         <Text variant='colored' fontSize='2xl'>
