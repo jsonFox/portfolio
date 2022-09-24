@@ -12,9 +12,9 @@ export default function Home() {
   const titles = [
     'Full-Stack Developer',
     'Comp Sci Graduate',
-    'Cat Dad',
-    'Gamer',
     'Coding Hobbyist',
+    'Esports Fan',
+    'Cat Dad',
   ];
   const offset = { transform: 'translateY(-4em)' }
   return (
