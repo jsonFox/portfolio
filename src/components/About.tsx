@@ -32,10 +32,10 @@ export default function About() {
             I'm Jason, an improvement-driven developer who's passionate about what I do and committed to getting things done efficiently and effectively.
           </Text>
           <Text>
-            I got my first taste of programming in middle school when I started writing programs in TI Basic on my calculator; however, it wasn't until I got my Associate's Degree that I realized it was what I truly wanted to do (I was majoring in Psychology). This led to the discovery of my passion for web development.
+            I got my first taste of programming in middle school when I started writing programs in TI Basic on my calculator. I started out college as a Psychology major, and soon after changed my major to Computer Science, where I discovered a passion for Web Development.
           </Text>
           <Text>
-            Since then, I've been specializing in JavaScript/TypeScript-based development and staying on the information hunt as I keep growing through constant learning and improvement.
+            Since then, I've been specializing in JavaScript/TypeScript-based development as I continue to grow myself and my skills through constant learning and improvement.
           </Text>
           <Text>
             If you want to see more about me professionally, check out<span> </span>
@@ -56,8 +56,7 @@ export default function About() {
             src={rosieUrl}
             onLoad={() => setIsLoaded(true)}
             borderRadius={4}
-            minH='325px'
-            maxH={{ base: imgHeight / 1.7, md: imgHeight }}
+            h={{ base: imgHeight / 1.7, md: imgHeight }}
             w='auto'
             my='auto'
           />
