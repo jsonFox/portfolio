@@ -34,9 +34,9 @@ const projects = [
   },
   {
     title: 'Gankbait',
-    tags: ['Express', 'Pug', 'Bulma', 'OAuth2', 'JWT'],
+    tags: ['Express', 'Pug', 'Bulma', 'OAuth2', 'MongoDB'],
     description: 'SPA for analyzing match timeline data from the Riot League of Legends match API.',
-    liveUrl: 'https://frightened-hat-colt.cyclic.app/',
+    liveUrl: 'https://gankbait-36ce7.web.app/',
     sourceUrl: 'https://github.com/JtheFox/gankbait',
   },
   {
