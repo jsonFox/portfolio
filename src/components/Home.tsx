@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useState } from 'react';
 import {
-  Flex, Box, Hide, Skeleton,
-  Heading, Text, Button, Image
-} from "@chakra-ui/react";
+  Flex,
+  Box,
+  Hide,
+  Skeleton,
+  Heading,
+  Text,
+  Button,
+  Image
+} from '@chakra-ui/react';
 import ReactTypingEffect from 'react-typing-effect';
 import portraitSrc from '../assets/portrait.png';
-import { scrollTo } from "../utils";
+import { scrollTo } from '../utils';
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -14,33 +20,27 @@ export default function Home() {
     'Comp Sci Graduate',
     'Coding Hobbyist',
     'Esports Fan',
-    'Cat Dad',
+    'Cat Dad'
   ];
-  const offset = { transform: 'translateY(-4em)' }
+  const offset = { transform: 'translateY(-4em)' };
   return (
-    <Flex
-      as='section'
-      id='home'
-      h='90vh'
-      direction='row'
-      alignItems='center'
-    >
+    <Flex as="section" id="home" h="90vh" direction="row" alignItems="center">
       <Box
         minW={{ base: '325px', md: '60%', lg: '50%', xl: '40%' }}
         {...offset}
       >
-        <Text variant='colored' fontSize='2xl'>
+        <Text variant="colored" fontSize="2xl">
           🙋‍♂️ Hi, my name is
         </Text>
-        <Heading as='h2' size='4xl' mb={1}>
+        <Heading as="h2" size="4xl" mb={1}>
           Jason Fox
         </Heading>
         <Heading
-          as='h3'
-          variant='muted'
-          size='xl'
+          as="h3"
+          variant="muted"
+          size="xl"
           noOfLines={1}
-          userSelect='none'
+          userSelect="none"
         >
           <ReactTypingEffect
             text={titles}
@@ -51,30 +51,26 @@ export default function Home() {
           />
         </Heading>
         <Button
-          variant='wide'
+          variant="wide"
           onClick={() => scrollTo('mywork')}
-          fontSize='lg'
+          fontSize="lg"
           mt={4}
         >
           See my work
         </Button>
       </Box>
-      <Hide below='sm'>
-        <Skeleton
-          isLoaded={isLoaded}
-          borderRadius='full'
-          {...offset}
-        >
+      <Hide below="sm">
+        <Skeleton isLoaded={isLoaded} borderRadius="full" {...offset}>
           <Image
             src={portraitSrc}
-            alt='Jason Fox'
-            borderRadius='full'
+            alt="Jason Fox"
+            borderRadius="full"
             w={{ base: '185px', lg: '215px' }}
-            h='auto'
+            h="auto"
             onLoad={() => setIsLoaded(true)}
           />
         </Skeleton>
       </Hide>
     </Flex>
-  )
+  );
 }

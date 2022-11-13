@@ -1,11 +1,14 @@
-import { Stack } from "@chakra-ui/react";
+import { Stack } from '@chakra-ui/react';
 import {
   Header,
   Home,
-  About, Skills, Work, Contact,
+  About,
+  Skills,
+  Work,
+  Contact,
   Footer
-} from "./components";
-import { motion } from "framer-motion";
+} from './components';
+import { motion } from 'framer-motion';
 
 const sections: Array<string> = [
   'Home',
@@ -13,16 +16,16 @@ const sections: Array<string> = [
   'Skills',
   'My Work',
   'Contact Me'
-]
+];
 
 export default function App() {
   return (
     <>
       <Header sections={sections} />
       <Stack
-        as='main'
-        direction='column'
-        w='auto'
+        as="main"
+        direction="column"
+        w="auto"
         mx={{ md: '2vw', lg: '5vw', xl: '13vw' }}
         px={6}
         spacing={{ base: 16, md: 24, lg: 32 }}
@@ -45,7 +48,7 @@ export default function App() {
         <Footer />
       </Stack>
     </>
-  )
+  );
 }
 
 function Animated({ children }: { children: JSX.Element }) {
@@ -66,5 +69,5 @@ function Animated({ children }: { children: JSX.Element }) {
     >
       {children}
     </motion.div>
-  )
+  );
 }
