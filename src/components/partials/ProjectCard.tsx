@@ -2,13 +2,13 @@ import { Box, Stack, Text, Button, Tag } from '@chakra-ui/react';
 import { Github, ExternalLink } from '../icons';
 import ProjectTitle from './ProjectTitle';
 
-type Props = {
+interface Props {
   title: string;
-  tags: Array<string>;
+  tags: string[];
   description: string;
   liveUrl?: string;
   sourceUrl?: string;
-};
+}
 
 export default function ProjectCard({
   title,
@@ -18,17 +18,17 @@ export default function ProjectCard({
   sourceUrl
 }: Props) {
   return (
-    <Box bg="#0BC5EA10" p={6} borderRadius={2} h="100%">
-      <Stack as="article" direction="column" spacing={4} h="100%">
+    <Box h="100%" p={6} bg="#0BC5EA10" borderRadius={2}>
+      <Stack as="article" direction="column" h="100%" spacing={4}>
         <ProjectTitle text={title} />
-        <Stack direction="row" flexWrap="wrap">
+        <Stack flexWrap="wrap" direction="row">
           {tags.map((tag: string) => (
-            <Tag key={tag} borderRadius="0.15rem" bg={'#8899CC33'}>
+            <Tag key={tag} bg={'#8899CC33'} borderRadius="0.15rem">
               {tag.replaceAll(' ', '\u00A0')}
             </Tag>
           ))}
         </Stack>
-        <Text pr={{ xl: 8 }} flex={1}>
+        <Text flex={1} pr={{ xl: 8 }}>
           {description}
         </Text>
         <Stack direction="row" mt="auto">

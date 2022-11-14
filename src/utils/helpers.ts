@@ -1,6 +1,9 @@
 export const scrollTo = (id: string) => {
-  const el = document.getElementById(id);
-  return el?.scrollIntoView({
+  const el = document.getElementById(
+    id.toLowerCase().replaceAll(/\s+/g, '-')
+  ) as HTMLElement;
+
+  return el.scrollIntoView({
     behavior: 'smooth',
     block: 'start',
     inline: 'nearest'
@@ -8,8 +11,8 @@ export const scrollTo = (id: string) => {
 };
 
 export const getElementDimensions = (id: string) => {
-  const el = document.getElementById(id);
-  if (!el) return [null, null];
+  const el = document.getElementById(id) as HTMLElement;
   const { width, height } = el.getBoundingClientRect();
+
   return [width, height];
 };

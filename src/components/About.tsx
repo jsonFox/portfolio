@@ -9,8 +9,7 @@ import {
   Image
 } from '@chakra-ui/react';
 import { SectionTitle } from './partials';
-import { getElementDimensions } from '../utils';
-import rosieUrl from '../assets/rosie.jpg';
+import { getElementDimensions } from '../utils/helpers';
 
 export default function About() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -26,9 +25,9 @@ export default function About() {
       <SectionTitle text="About Me" />
       <Flex as="article" direction={{ base: 'column', md: 'row' }}>
         <Stack
-          id="about-text"
           maxW={{ md: '70%', lg: '60%' }}
           pr={{ md: 12, lg: 20 }}
+          id="about-text"
         >
           <Text>
             I'm Jason, an improvement-driven developer who's passionate about
@@ -50,10 +49,10 @@ export default function About() {
             If you want to see more about me professionally, check out
             <span> </span>
             <Link
-              href="https://docs.google.com/document/d/e/2PACX-1vTiKdTS_vxjFzVYOI0meJtMDHJFNhd4-Hw87TdWv0JHPF2FP9Kb6w57YbuFAK8AoA/pub"
-              target="_blank"
               fontFamily="Overpass"
               fontSize="1.1rem"
+              href="https://docs.google.com/document/d/e/2PACX-1vTiKdTS_vxjFzVYOI0meJtMDHJFNhd4-Hw87TdWv0JHPF2FP9Kb6w57YbuFAK8AoA/pub"
+              target="_blank"
             >
               my&nbsp;resume
             </Link>
@@ -61,15 +60,15 @@ export default function About() {
           </Text>
           <Text>I also have a little furball named Rosie! (Pictured here)</Text>
         </Stack>
-        <Skeleton isLoaded={isLoaded} display="flex">
+        <Skeleton display="flex" isLoaded={isLoaded}>
           <Image
-            alt="My cat rosie"
-            src={rosieUrl}
-            onLoad={() => setIsLoaded(true)}
-            borderRadius={4}
-            h={{ base: imgHeight / 1.7, md: imgHeight }}
             w="auto"
+            h={{ base: imgHeight / 1.7, md: imgHeight }}
             my="auto"
+            borderRadius={4}
+            alt="My cat rosie"
+            onLoad={() => setIsLoaded(true)}
+            src={new URL('../assets/rosie.jpg', import.meta.url).href}
           />
         </Skeleton>
       </Flex>

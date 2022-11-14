@@ -1,11 +1,15 @@
-import { Flex, Heading, Divider } from '@chakra-ui/react';
+import { Flex, Heading, Divider, HeadingProps } from '@chakra-ui/react';
 
-export default function SectionTitle({ text }: { text: string }) {
+interface Props extends Omit<HeadingProps, 'children'> {
+  text: string;
+}
+
+export default function SectionTitle({ text, ...props }: Props) {
   return (
     <Flex mb={{ base: 8, md: 10, lg: 12 }}>
-      <Heading as="h2" variant="section">
+      <Heading as="h2" variant="section" {...props}>
         {text}
-        <Divider ml="1%" w="85%" />
+        <Divider w="85%" ml="1%" />
       </Heading>
     </Flex>
   );

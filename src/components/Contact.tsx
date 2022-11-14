@@ -1,10 +1,10 @@
-import { Box, Stack, Link } from '@chakra-ui/react';
+import { Box, Stack, Link, StackProps } from '@chakra-ui/react';
 import { SectionTitle } from './partials';
 import { Email, Linkedin, GithubSquare } from './icons';
 
 export default function Contact() {
   return (
-    <Box as="section" id="contactme">
+    <Box as="section" id="contact-me">
       <SectionTitle text="Contact Me" />
       <Stack pl={4}>
         <Info>
@@ -24,10 +24,14 @@ export default function Contact() {
   );
 }
 
-function Info({ children }: { children: JSX.Element[] }) {
+function Info(props: StackProps) {
   return (
-    <Stack direction="row" fontSize="lg" alignItems="center" spacing={6}>
-      {children}
-    </Stack>
+    <Stack
+      {...props}
+      alignItems="center"
+      direction="row"
+      fontSize="lg"
+      spacing={6}
+    />
   );
 }

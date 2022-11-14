@@ -8,14 +8,14 @@ import {
   Jquery,
   Jest,
   Bootstrap,
-  Graphql,
   Node,
   React,
   Express,
   Pug,
   Mysql,
   Mongodb,
-  Aws
+  Aws,
+  Tailwind
 } from './icons';
 import { SectionTitle } from './partials';
 
@@ -25,9 +25,9 @@ export default function Skills() {
       <SectionTitle text="Skills" />
       <SimpleGrid
         as="article"
+        opacity={0.9}
         minChildWidth={{ base: '70px', md: '75px', lg: '80px' }}
         spacing={{ base: '20px', md: '25px', lg: '30px' }}
-        opacity={0.9}
       >
         <SkillIcon name="HTML" Icon={Html} />
         <SkillIcon name="CSS" Icon={Css} />
@@ -36,7 +36,7 @@ export default function Skills() {
         <SkillIcon name="jQuery" Icon={Jquery} />
         <SkillIcon name="Jest" Icon={Jest} />
         <SkillIcon name="Bootstrap" Icon={Bootstrap} />
-        <SkillIcon name="GraphQL" Icon={Graphql} />
+        <SkillIcon name="TailwindCSS" Icon={Tailwind} />
         <SkillIcon name="NodeJS" Icon={Node} />
         <SkillIcon name="React" Icon={React} />
         <SkillIcon name="ExpressJS" Icon={Express} />
@@ -44,7 +44,7 @@ export default function Skills() {
         <SkillIcon name="MySQL" Icon={Mysql} />
         <SkillIcon name="MongoDB" Icon={Mongodb} />
         <SkillIcon name="AWS" Icon={Aws} />
-        <Text fontSize="xl" ml={4} my="auto">
+        <Text ml={4} my="auto" fontSize="xl">
           ...and more!
         </Text>
       </SimpleGrid>
@@ -54,9 +54,9 @@ export default function Skills() {
 
 function SkillIcon({ Icon, name }: { Icon: IconType; name: string }) {
   return (
-    <Flex as="figure" direction="column" alignItems="center">
+    <Flex as="figure" align="center" direction="column">
       {<Icon size="50px" />}
-      <Text as="figcaption" textAlign="center" mt={2}>
+      <Text as="figcaption" mt={2} textAlign="center">
         {name}
       </Text>
     </Flex>

@@ -1,17 +1,19 @@
-import { Heading } from '@chakra-ui/react';
+import { Heading, HeadingProps } from '@chakra-ui/react';
+
+interface Props extends Omit<HeadingProps, 'children'> {
+  text: string;
+  featured?: boolean;
+}
 
 export default function ProjectTitle({
   text,
-  featured
-}: {
-  text: string;
-  featured?: boolean;
-}) {
-  const isSpace = (s: string) => /^\s+$/.test(s);
+  featured = false,
+  ...props
+}: Props) {
   return (
-    <Heading as="h4" size={featured ? 'xl' : 'lg'} display="block">
-      {text.split(/(\s+)/g).map((s: string, i: number) =>
-        isSpace(s) ? (
+    <Heading as="h4" display="block" size={featured ? 'xl' : 'lg'} {...props}>
+      {text.split(/(\s+)/g).map((s, i) =>
+        /^\s+$/.test(s) ? (
           '\u00A0'
         ) : (
           <span key={i} className="p-title" style={{ display: 'inline-block' }}>

@@ -9,40 +9,34 @@ import {
   Button,
   Image
 } from '@chakra-ui/react';
-import ReactTypingEffect from 'react-typing-effect';
-import portraitSrc from '../assets/portrait.png';
-import { scrollTo } from '../utils';
+import Typed from 'react-typing-effect';
+import { scrollTo } from '../utils/helpers';
+import { titles } from '../utils/constants';
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
-  const titles = [
-    'Full-Stack Developer',
-    'Comp Sci Graduate',
-    'Coding Hobbyist',
-    'Esports Fan',
-    'Cat Dad'
-  ];
   const offset = { transform: 'translateY(-4em)' };
+
   return (
-    <Flex as="section" id="home" h="90vh" direction="row" alignItems="center">
+    <Flex as="section" align="center" direction="row" h="90vh" id="home">
       <Box
         minW={{ base: '325px', md: '60%', lg: '50%', xl: '40%' }}
         {...offset}
       >
-        <Text variant="colored" fontSize="2xl">
+        <Text fontSize="2xl" variant="colored">
           🙋‍♂️ Hi, my name is
         </Text>
-        <Heading as="h2" size="4xl" mb={1}>
+        <Heading as="h2" mb={1} size="4xl">
           Jason Fox
         </Heading>
         <Heading
           as="h3"
-          variant="muted"
-          size="xl"
-          noOfLines={1}
           userSelect="none"
+          noOfLines={1}
+          size="xl"
+          variant="muted"
         >
-          <ReactTypingEffect
+          <Typed
             text={titles}
             typingDelay={200}
             speed={30}
@@ -51,23 +45,23 @@ export default function Home() {
           />
         </Heading>
         <Button
-          variant="wide"
-          onClick={() => scrollTo('mywork')}
-          fontSize="lg"
           mt={4}
+          fontSize="lg"
+          onClick={() => scrollTo('my-work')}
+          variant="wide"
         >
           See my work
         </Button>
       </Box>
       <Hide below="sm">
-        <Skeleton isLoaded={isLoaded} borderRadius="full" {...offset}>
+        <Skeleton borderRadius="full" isLoaded={isLoaded} {...offset}>
           <Image
-            src={portraitSrc}
-            alt="Jason Fox"
-            borderRadius="full"
             w={{ base: '185px', lg: '215px' }}
             h="auto"
+            borderRadius="full"
+            alt="Jason Fox"
             onLoad={() => setIsLoaded(true)}
+            src={new URL('../assets/portrait.png', import.meta.url).href}
           />
         </Skeleton>
       </Hide>

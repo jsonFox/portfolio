@@ -13,15 +13,15 @@ import {
 import { Circle, Github, ExternalLink } from '../icons';
 import ProjectTitle from './ProjectTitle';
 
-type Props = {
+interface Props {
   imageUrl: string;
   mobile: boolean;
   title: string;
-  tags: Array<string>;
+  tags: string[];
   description: string;
   liveUrl?: string;
   sourceUrl?: string;
-};
+}
 
 export default function FeaturedProjectCard({
   imageUrl,
@@ -32,28 +32,22 @@ export default function FeaturedProjectCard({
   liveUrl,
   sourceUrl
 }: Props) {
-  const displayProps = { imageUrl, title };
   return (
-    <Box bg="#0BC5EA10" p={4} borderRadius={4}>
-      <Flex
-        direction="row"
-        flexWrap="wrap"
-        justifyContent="space-between"
-        alignItems="center"
-      >
-        <Flex w={{ lg: '45%' }} my="auto" minH="100%">
+    <Box p={4} bg="#0BC5EA10" borderRadius={4}>
+      <Flex align="center" justify="space-between" wrap="wrap" direction="row">
+        <Flex w={{ lg: '45%' }} minH="100%" my="auto">
           {mobile ? (
-            <MobileDisplay {...displayProps} />
+            <MobileDisplay {...{ imageUrl, title }} />
           ) : (
-            <DesktopDisplay {...displayProps} />
+            <DesktopDisplay {...{ imageUrl, title }} />
           )}
         </Flex>
         <Stack w={{ lg: '45%' }} pr={{ lg: 8 }}>
           <Stack as="article" direction="column" spacing={4}>
             <ProjectTitle text={title} featured />
-            <Stack direction="row" flexWrap="wrap">
-              {tags.map((tag: string) => (
-                <Tag key={tag} borderRadius="0.15rem" bg={'#8899CC33'}>
+            <Stack flexWrap="wrap" direction="row">
+              {tags.map((tag) => (
+                <Tag key={tag} bg={'#8899CC33'} borderRadius="0.15rem">
                   {tag.replaceAll(' ', '\u00A0')}
                 </Tag>
               ))}
@@ -89,64 +83,61 @@ export default function FeaturedProjectCard({
   );
 }
 
-type displayProps = {
-  imageUrl: string;
-  title: string;
-};
-
-function MobileDisplay({ imageUrl, title }: displayProps) {
+function MobileDisplay({ imageUrl, title }: Partial<Props>) {
   const [isLoaded, setIsLoaded] = useState(false);
   const phoneBg = useColorModeValue('#F2F2F2', '#0F0F0F');
+
   return (
     <Box
-      bg={phoneBg}
-      py={{ base: 2, md: 3, lg: 4 }}
-      px={1}
-      borderRadius={{ base: 6, md: 8, lg: 10 }}
       overflow="hidden"
       maxW="max-content"
       m="auto"
+      px={1}
+      py={{ base: 2, md: 3, lg: 4 }}
+      bg={phoneBg}
+      borderRadius={{ base: 6, md: 8, lg: 10 }}
       outline="1px solid #22222222"
     >
       <Skeleton isLoaded={isLoaded}>
         <Image
+          w="auto"
+          maxH={{ base: '150px', md: '200px', lg: '250px' }}
+          borderRadius={{ base: 4, md: 5, lg: 6 }}
+          alt={title}
           onLoad={() => setIsLoaded(true)}
           src={imageUrl}
-          alt={title}
-          maxH={{ base: '150px', md: '200px', lg: '250px' }}
-          w="auto"
-          borderRadius={{ base: 4, md: 5, lg: 6 }}
         />
       </Skeleton>
     </Box>
   );
 }
 
-function DesktopDisplay({ imageUrl, title }: displayProps) {
+function DesktopDisplay({ imageUrl, title }: Partial<Props>) {
   const [isLoaded, setIsLoaded] = useState(false);
   const browserBg = useColorModeValue('#E9E7E8', '#3C3D3F');
+
   return (
     <Box
-      borderRadius={3}
       overflow="hidden"
       m="auto"
+      borderRadius={3}
       outline="1px solid #22222222"
     >
       <Flex
-        pointerEvents="none"
+        align="center"
         minH={{ base: 3, lg: 4 }}
-        bg={browserBg}
-        alignItems="center"
         pl={{ base: 1, lg: 2 }}
+        bg={browserBg}
+        pointerEvents="none"
       >
-        <Stack direction="row" spacing="1.5%" alignItems="center">
+        <Stack alignItems="center" direction="row" spacing="1.5%">
           <Circle size="2%" color="#FF6660" />
           <Circle size="2%" color="#EEBF3B" />
           <Circle size="2%" color="#34C355" />
         </Stack>
       </Flex>
-      <Skeleton isLoaded={isLoaded}>
-        <Image onLoad={() => setIsLoaded(true)} src={imageUrl} alt={title} />
+      <Skeleton {...{ isLoaded }}>
+        <Image alt={title} onLoad={() => setIsLoaded(true)} src={imageUrl} />
       </Skeleton>
     </Box>
   );

@@ -20,7 +20,8 @@ export {
   SiMongodb as Mongodb,
   SiMysql as Mysql,
   SiPug as Pug,
-  SiTypescript as Typescript
+  SiTypescript as Typescript,
+  SiTailwindcss as Tailwind
 } from 'react-icons/si';
 
 export {

@@ -69,15 +69,15 @@ const projects = [
 
 export default function Work() {
   return (
-    <Box as="section" id="mywork">
+    <Box as="section" id="my-work">
       <SectionTitle text="My Work" />
       <Stack spacing={6}>
         {featuredProjects.map((p, i) => (
           <FeaturedProjectCard key={i} {...p} />
         ))}
         <SimpleGrid
-          columns={{ base: 1, md: 2, lg: 3 }}
           gap={{ base: 4, lg: 6, xl: 10 }}
+          columns={{ base: 1, md: 2, lg: 3 }}
         >
           {projects.map((p, i) => (
             <ProjectCard key={i} {...p} />
