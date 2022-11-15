@@ -1,3 +1,5 @@
+export { default as Logo } from './logo';
+
 export {
   FaAws as Aws,
   FaBootstrap as Bootstrap,
@@ -30,8 +32,6 @@ export {
 } from 'react-icons/ri';
 
 export { BsCircleFill as Circle } from 'react-icons/bs';
-
-export { GiFox as Logo } from 'react-icons/gi';
 
 export { FiExternalLink as ExternalLink } from 'react-icons/fi';
 

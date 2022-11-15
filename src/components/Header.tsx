@@ -52,7 +52,6 @@ export default function Header({ sections }: Props) {
               as={Logo}
               w={{ base: '32px', md: '40px', lg: '44px', xl: '48px' }}
               h="auto"
-              mr={{ base: 1, md: 2, lg: 3 }}
             />
             <Text
               as="h1"

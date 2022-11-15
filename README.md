@@ -11,5 +11,5 @@ My updated portfolio for 2022.
 
 Want to see my growth as a developer?
 
-- [This](https://github.com/jthefox/portfolio-original) is the first portfolio that I built in HTML, CSS, and jQuery
+- [This](https://github.com/jsonfox/portfolio-original) is the first portfolio that I built in HTML, CSS, and jQuery
 - [Here](https://github.com/JtheFox/react-portfolio) is the second iteration, rebuilt with React and React Router

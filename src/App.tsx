@@ -10,18 +10,12 @@ import {
 } from './components';
 import { motion } from 'framer-motion';
 
-const sections: Array<string> = [
-  'Home',
-  'About',
-  'Skills',
-  'My Work',
-  'Contact Me'
-];
+const sections = [Home, About, Skills, Work, Contact];
 
 export default function App() {
   return (
     <>
-      <Header sections={sections} />
+      <Header sections={sections.map((s) => s.name)} />
       <Stack
         as="main"
         direction="column"
@@ -30,44 +24,27 @@ export default function App() {
         px={6}
         spacing={{ base: 16, md: 24, lg: 32 }}
       >
-        <Animated>
-          <Home />
-        </Animated>
-        <Animated>
-          <About />
-        </Animated>
-        <Animated>
-          <Skills />
-        </Animated>
-        <Animated>
-          <Work />
-        </Animated>
-        <Animated>
-          <Contact />
-        </Animated>
+        {sections.map((Section) => (
+          <motion.div
+            key={Section.name}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  duration: 0.5
+                }
+              }
+            }}
+          >
+            <Section />
+          </motion.div>
+        ))}
         <Footer />
       </Stack>
     </>
-  );
-}
-
-function Animated({ children }: { children: JSX.Element }) {
-  return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: false }}
-      variants={{
-        hidden: { opacity: 0 },
-        visible: {
-          opacity: 1,
-          transition: {
-            duration: 0.5
-          }
-        }
-      }}
-    >
-      {children}
-    </motion.div>
   );
 }

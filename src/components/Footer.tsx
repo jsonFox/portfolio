@@ -15,10 +15,10 @@ export default function Footer() {
     <Box as="footer">
       <Divider mb={4} borderColor={dividerColor} />
       <Stack alignItems="center" direction="row" p={12}>
-        <Logo fontSize="2rem" />
+        <Logo size={32} />
         <Text>&copy; 2022 built by Jason Fox</Text>
         <Text>|</Text>
-        <Link href="https://github.com/jthefox/portfolio">View source</Link>
+        <Link href="https://github.com/jsonfox/portfolio">View source</Link>
       </Stack>
     </Box>
   );

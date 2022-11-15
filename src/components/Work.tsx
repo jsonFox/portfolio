@@ -4,7 +4,7 @@ import { projects } from '../utils/info';
 
 export default function Work() {
   return (
-    <Box as="section" id="my-work">
+    <Box as="section" id="work">
       <SectionTitle text="My Work" />
       <Stack spacing={6}>
         {projects.featured.map((p, i) => (

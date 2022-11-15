@@ -1,22 +1,17 @@
-import {
-  Box,
-  Flex,
-  Stack,
-  Text,
-  Link,
-} from '@chakra-ui/react';
+import { Box, Stack, Text, Link } from '@chakra-ui/react';
 import { SectionTitle, Image } from './partials';
+import { resume } from '../utils/info';
 
 export default function About() {
   return (
     <Box as="section" id="about">
       <SectionTitle text="About Me" />
-      <Flex as="article" direction={{ base: 'column', md: 'row' }}>
-        <Stack
-          maxW={{ md: '70%', lg: '60%' }}
-          pr={{ md: 12, lg: 20 }}
-          id="about-text"
-        >
+      <Stack
+        wrap={{ base: 'wrap', lg: 'nowrap' }}
+        direction="row"
+        spacing={{ base: 0, lg: 10 }}
+      >
+        <Stack as="article" w={{ base: '100%', lg: '60%' }} id="about-text">
           <Text>
             I'm Jason, an improvement-driven developer who's passionate about
             what I do and committed to getting things done efficiently and
@@ -39,7 +34,7 @@ export default function About() {
             <Link
               fontFamily="Overpass"
               fontSize="1.1rem"
-              href="https://docs.google.com/document/d/e/2PACX-1vTiKdTS_vxjFzVYOI0meJtMDHJFNhd4-Hw87TdWv0JHPF2FP9Kb6w57YbuFAK8AoA/pub"
+              href={resume}
               target="_blank"
             >
               my&nbsp;resume
@@ -49,13 +44,13 @@ export default function About() {
           <Text>I also have a little furball named Rosie! (Pictured here)</Text>
         </Stack>
         <Image
-          w="auto"
-          my="auto"
+          w={{ base: '300px', lg: '400px' }}
+          h="auto"
           borderRadius={4}
           alt="My cat rosie"
           src={new URL('../assets/rosie.jpg', import.meta.url).href}
         />
-      </Flex>
+      </Stack>
     </Box>
   );
 }

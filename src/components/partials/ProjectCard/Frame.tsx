@@ -1,10 +1,4 @@
-import {
-  Box,
-  Stack,
-  Flex,
-  Circle,
-  useColorModeValue
-} from '@chakra-ui/react';
+import { Box, Stack, Flex, Circle, useColorModeValue } from '@chakra-ui/react';
 import Image from '../Image';
 
 interface Props {

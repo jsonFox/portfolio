@@ -5,6 +5,15 @@ export const titles = [
   'Cat Dad'
 ];
 
+export const resume =
+  'https://drive.google.com/file/d/1cVI2p_qS7TgrYZrGtiM8VKw9vuuFCX1X/view?usp=share_link';
+
+export const contacts = {
+  github: 'jsonFox',
+  linkedin: 'jasonfox96',
+  email: 'jfox0096@gmail.com'
+};
+
 export const projects = {
   default: {
     title: '',
@@ -18,8 +27,8 @@ export const projects = {
       title: 'Tierbuilder',
       tags: ['TypeScript', 'Redux', 'Tailwind'],
       description: 'A lightweight React clone of Tiermaker.com',
-      live: 'https://jthefox.github.io/tierbuilder/',
-      source: 'https://github.com/jthefox/tierbuilder',
+      live: 'https://jsonfox.github.io/tierbuilder/',
+      source: 'https://github.com/jsonfox/tierbuilder',
       mobile: false
     },
     {
@@ -47,7 +56,7 @@ export const projects = {
       description:
         'React-based Electron application scaffolded with Vite designed to fetch and parse bulk match data from Riot API.',
       live: '',
-      source: 'https://github.com/jthefox/OneStats'
+      source: 'https://github.com/jsonfox/OneStats'
     },
     {
       title: 'Tierlisted.gg',
@@ -62,7 +71,7 @@ export const projects = {
       tags: ['Discordjs', 'Sequelize', 'Bootstrap', 'AWS'],
       description:
         'Your friendly neighborhood Discord c(h)atbot. Hosted on AWS.',
-      live: 'https://jthefox.github.io/rosiebot/',
+      live: 'https://jsonfox.github.io/rosiebot/',
       source: 'https://github.com/JtheFox/rosiebot'
     },
     {
@@ -77,7 +86,7 @@ export const projects = {
       tags: ['HTML', 'CSS', 'JavaScript'],
       description:
         'Simple SPA to generate a secure password with the click of a button.',
-      live: 'https://jthefox.github.io/password-generator/',
+      live: 'https://jsonfox.github.io/password-generator/',
       source: 'https://github.com/JtheFox/password-generator'
     }
   ]

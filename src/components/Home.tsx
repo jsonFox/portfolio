@@ -19,10 +19,7 @@ export default function Home() {
 
   return (
     <Flex as="section" align="center" direction="row" h="90vh" id="home">
-      <Box
-        minW={{ base: '325px', md: '60%', xl: '50%' }}
-        {...offset}
-      >
+      <Box minW={{ base: '325px', md: '60%', xl: '50%' }} {...offset}>
         <Text fontSize="2xl" variant="colored">
           🙋‍♂️ Hi, my name is
         </Text>
@@ -47,7 +44,7 @@ export default function Home() {
         <Button
           mt={4}
           fontSize="lg"
-          onClick={() => scrollTo('my-work')}
+          onClick={() => scrollTo('work')}
           variant="wide"
         >
           See my work
