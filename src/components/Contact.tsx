@@ -27,11 +27,11 @@ export default function Contact() {
 function Info(props: StackProps) {
   return (
     <Stack
-      {...props}
       alignItems="center"
       direction="row"
       fontSize="lg"
       spacing={6}
+      {...props}
     />
   );
 }

@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <Flex as="section" align="center" direction="row" h="90vh" id="home">
       <Box
-        minW={{ base: '325px', md: '60%', lg: '50%', xl: '40%' }}
+        minW={{ base: '325px', md: '60%', xl: '50%' }}
         {...offset}
       >
         <Text fontSize="2xl" variant="colored">

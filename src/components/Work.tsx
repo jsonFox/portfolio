@@ -1,5 +1,5 @@
 import { Box, Stack, SimpleGrid } from '@chakra-ui/react';
-import { SectionTitle, FeaturedProjectCard, ProjectCard } from './partials';
+import { SectionTitle, ProjectCard } from './partials';
 import { projects } from '../utils/info';
 
 export default function Work() {
@@ -8,7 +8,7 @@ export default function Work() {
       <SectionTitle text="My Work" />
       <Stack spacing={6}>
         {projects.featured.map((p, i) => (
-          <FeaturedProjectCard key={i} {...p} />
+          <ProjectCard key={i} {...p} featured />
         ))}
         <SimpleGrid
           gap={{ base: 4, lg: 6, xl: 10 }}

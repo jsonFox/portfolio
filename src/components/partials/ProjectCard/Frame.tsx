@@ -1,13 +1,11 @@
-import { useState } from 'react';
 import {
   Box,
   Stack,
   Flex,
-  Image,
-  Skeleton,
+  Circle,
   useColorModeValue
 } from '@chakra-ui/react';
-import { Circle } from '@chakra-ui/react';
+import Image from '../Image';
 
 interface Props {
   title: string;
@@ -15,12 +13,11 @@ interface Props {
 }
 
 export default function Frame({ title, mobile }: Props) {
-  const [isLoaded, setIsLoaded] = useState(false);
   const bg = mobile
     ? useColorModeValue('#F2F2F2', '#0F0F0F')
     : useColorModeValue('#E9E7E8', '#3C3D3F');
   const imageUrl = new URL(
-    `../../assets/projects/${title.toLowerCase().replaceAll(' ', '-')}.png`,
+    `../../../assets/projects/${title.toLowerCase().replaceAll(' ', '-')}.png`,
     import.meta.url
   ).href;
   const circle = { sm: '6px', md: '8px', lg: '10px' };
@@ -35,16 +32,13 @@ export default function Frame({ title, mobile }: Props) {
       borderRadius={{ base: 6, md: 8, lg: 10 }}
       outline="1px solid #22222222"
     >
-      <Skeleton isLoaded={isLoaded}>
-        <Image
-          w="auto"
-          maxH={{ base: '150px', md: '200px', lg: '250px' }}
-          borderRadius={{ base: 4, md: 5, lg: 6 }}
-          alt={title}
-          onLoad={() => setIsLoaded(true)}
-          src={imageUrl}
-        />
-      </Skeleton>
+      <Image
+        w="auto"
+        maxH={{ base: '150px', md: '200px', lg: '250px' }}
+        borderRadius={{ base: 4, md: 5, lg: 6 }}
+        alt={title}
+        src={imageUrl}
+      />
     </Box>
   ) : (
     <Box
@@ -66,9 +60,7 @@ export default function Frame({ title, mobile }: Props) {
           <Circle bg="#34C355" size={circle} />
         </Stack>
       </Flex>
-      <Skeleton {...{ isLoaded }}>
-        <Image alt={title} onLoad={() => setIsLoaded(true)} src={imageUrl} />
-      </Skeleton>
+      <Image alt={title} src={imageUrl} />
     </Box>
   );
 }

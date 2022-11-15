@@ -1,6 +1,7 @@
-import { Box, Stack, Text, Button, Tag } from '@chakra-ui/react';
-import { Github, ExternalLink } from '../icons';
-import ProjectTitle from './ProjectTitle';
+import { Stack, Text, Button, Tag } from '@chakra-ui/react';
+import { Github, ExternalLink } from '../../icons';
+import ProjectTitle from './Title';
+import Wrapper from './Wrapper';
 
 interface Props {
   title: string;
@@ -8,16 +9,20 @@ interface Props {
   description: string;
   live?: string;
   source?: string;
+  featured?: boolean;
+  mobile?: boolean;
 }
 
 export default function ProjectCard({
   title,
   tags,
   description,
+  featured,
+  mobile,
   ...urls
 }: Props) {
   return (
-    <Box h="100%" p={6} bg="#0BC5EA10" borderRadius={2}>
+    <Wrapper {...{ title, featured, mobile }}>
       <Stack as="article" direction="column" h="100%" spacing={4}>
         <ProjectTitle text={title} />
         <Stack flexWrap="wrap" direction="row">
@@ -47,6 +52,6 @@ export default function ProjectCard({
           )}
         </Stack>
       </Stack>
-    </Box>
+    </Wrapper>
   );
 }

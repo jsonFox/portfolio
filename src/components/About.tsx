@@ -1,25 +1,13 @@
-import { useEffect, useState } from 'react';
 import {
   Box,
   Flex,
   Stack,
-  Skeleton,
   Text,
   Link,
-  Image
 } from '@chakra-ui/react';
-import { SectionTitle } from './partials';
-import { getElementDimensions } from '../utils/helpers';
+import { SectionTitle, Image } from './partials';
 
 export default function About() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [imgHeight, setImgHeight] = useState(0);
-
-  useEffect(() => {
-    const height = getElementDimensions('about-text')[1];
-    height && setImgHeight(height);
-  });
-
   return (
     <Box as="section" id="about">
       <SectionTitle text="About Me" />
@@ -60,17 +48,13 @@ export default function About() {
           </Text>
           <Text>I also have a little furball named Rosie! (Pictured here)</Text>
         </Stack>
-        <Skeleton display="flex" isLoaded={isLoaded}>
-          <Image
-            w="auto"
-            h={{ base: imgHeight / 1.7, md: imgHeight }}
-            my="auto"
-            borderRadius={4}
-            alt="My cat rosie"
-            onLoad={() => setIsLoaded(true)}
-            src={new URL('../assets/rosie.jpg', import.meta.url).href}
-          />
-        </Skeleton>
+        <Image
+          w="auto"
+          my="auto"
+          borderRadius={4}
+          alt="My cat rosie"
+          src={new URL('../assets/rosie.jpg', import.meta.url).href}
+        />
       </Flex>
     </Box>
   );
