@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react';
 import Typed from 'react-typing-effect';
 import { scrollTo } from '../utils/helpers';
-import { titles } from '../utils/constants';
+import { titles } from '../utils/info';
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);

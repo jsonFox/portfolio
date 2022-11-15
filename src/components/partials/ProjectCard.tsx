@@ -6,16 +6,15 @@ interface Props {
   title: string;
   tags: string[];
   description: string;
-  liveUrl?: string;
-  sourceUrl?: string;
+  live?: string;
+  source?: string;
 }
 
 export default function ProjectCard({
   title,
   tags,
   description,
-  liveUrl,
-  sourceUrl
+  ...urls
 }: Props) {
   return (
     <Box h="100%" p={6} bg="#0BC5EA10" borderRadius={2}>
@@ -32,21 +31,19 @@ export default function ProjectCard({
           {description}
         </Text>
         <Stack direction="row" mt="auto">
-          {liveUrl && (
-            <Button as="a" href={liveUrl} target="_blank" variant="project">
-              <ExternalLink fontSize="1.5rem" />
-              <Text ml="0.5rem" pt={1}>
-                Live
-              </Text>
-            </Button>
-          )}
-          {sourceUrl && (
-            <Button as="a" href={sourceUrl} target="_blank" variant="project">
-              <Github fontSize="1.5rem" />
-              <Text ml="0.5rem" pt={1}>
-                Source
-              </Text>
-            </Button>
+          {Object.entries(urls).map(([k, v]) =>
+            !v ? null : (
+              <Button key={k} as="a" href={v} target="_blank" variant="project">
+                {/live/i.test(k) ? (
+                  <ExternalLink fontSize="1.5rem" />
+                ) : (
+                  <Github fontSize="1.5rem" />
+                )}
+                <Text ml="0.5rem" pt={1}>
+                  {/live/i.test(k) ? 'Live' : 'Source'}
+                </Text>
+              </Button>
+            )
           )}
         </Stack>
       </Stack>
