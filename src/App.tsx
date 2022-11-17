@@ -11,11 +11,12 @@ import {
 import { motion } from 'framer-motion';
 
 const sections = [Home, About, Skills, Work, Contact];
+const sectionNames = ['Home', 'About', 'Skills', 'Work', 'Contact'];
 
 export default function App() {
   return (
     <>
-      <Header sections={sections.map((s) => s.name)} />
+      <Header sections={sectionNames} />
       <Stack
         as="main"
         direction="column"
