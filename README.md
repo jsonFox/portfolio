@@ -5,7 +5,7 @@
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Chakra](https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white)
 
-### 🔗 [Live Site](https://www.portfolio.jthefox.com/)
+### 🔗 [Live Site](https://jthefox.com/)
 
 My updated portfolio for 2022.
 
