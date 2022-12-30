@@ -28,6 +28,7 @@ export default function About() {
             development as I continue to grow myself and my skills through
             constant learning and improvement.
           </Text>
+          <Text>I also have a cat named Rosie! (Pictured here)</Text>
           <Text>
             If you want to see more about me professionally, check out
             <span> </span>
@@ -41,7 +42,6 @@ export default function About() {
             </Link>
             .
           </Text>
-          <Text>I also have a little furball named Rosie! (Pictured here)</Text>
         </Stack>
         <Image
           w={{ base: '300px', lg: '400px' }}
