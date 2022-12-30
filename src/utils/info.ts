@@ -33,7 +33,7 @@ export const projects = {
     },
     {
       title: 'Chopping Block',
-      tags: ['React Native', 'Firebase Auth', 'Ant Design'],
+      tags: ['React Native', 'Firebase', 'Ant Design'],
       description:
         'A helpful app that takes the hassle out of figuring out where to eat.',
       live: '',
@@ -43,12 +43,19 @@ export const projects = {
   ],
   list: [
     {
+      title: 'Blastoff',
+      tags: ['Express', 'Sequelize', 'Handlebars', 'Bulma'],
+      description: 'SpaceX launch information display using SpaceX API.',
+      live: 'https://blastoff.herokuapp.com/',
+      source: 'https://github.com/jsonfox/blastoff'
+    },
+    {
       title: 'Gankbait',
       tags: ['Express', 'Pug', 'OAuth2', 'MongoDB'],
       description:
         'GCP-hosted SPA for analyzing match timeline data from the Riot match-v5 API.',
       live: 'https://gankbait-36ce7.web.app/',
-      source: 'https://github.com/JtheFox/gankbait'
+      source: 'https://github.com/jsonfox/gankbait'
     },
     {
       title: 'OneStats',
@@ -72,14 +79,7 @@ export const projects = {
       description:
         'Your friendly neighborhood Discord c(h)atbot. Hosted on AWS.',
       live: 'https://jsonfox.github.io/rosiebot/',
-      source: 'https://github.com/JtheFox/rosiebot'
-    },
-    {
-      title: 'Blastoff',
-      tags: ['Express', 'Sequelize', 'Handlebars', 'Bulma'],
-      description: 'SpaceX launch information display using SpaceX API.',
-      live: 'https://blastoff2.herokuapp.com/',
-      source: 'https://github.com/JtheFox/blastoff'
+      source: 'https://github.com/jsonfox/rosiebot'
     },
     {
       title: 'Password Generator',
@@ -87,7 +87,7 @@ export const projects = {
       description:
         'Simple SPA to generate a secure password with the click of a button.',
       live: 'https://jsonfox.github.io/password-generator/',
-      source: 'https://github.com/JtheFox/password-generator'
+      source: 'https://github.com/jsonfox/password-generator'
     }
   ]
 };
