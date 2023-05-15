@@ -50,12 +50,12 @@ export const projects = {
       source: 'https://github.com/jsonfox/blastoff'
     },
     {
-      title: 'Gankbait',
+      title: 'Lanefo',
       tags: ['Express', 'Pug', 'OAuth2', 'MongoDB'],
       description:
         'GCP-hosted SPA for analyzing match timeline data from the Riot match-v5 API.',
       live: 'https://gankbait-36ce7.web.app/',
-      source: 'https://github.com/jsonfox/gankbait'
+      source: 'https://github.com/jsonfox/lanefo'
     },
     {
       title: 'OneStats',
