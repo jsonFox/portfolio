@@ -6,7 +6,7 @@ export const titles = [
 ];
 
 export const resume =
-  'https://drive.google.com/file/d/1cVI2p_qS7TgrYZrGtiM8VKw9vuuFCX1X/view?usp=share_link';
+  'https://drive.google.com/file/d/13cYd5A72YuYxhPj4bAr9L-fXbg0em1A8/view?usp=sharing';
 
 export const contacts = {
   github: 'jsonFox',
