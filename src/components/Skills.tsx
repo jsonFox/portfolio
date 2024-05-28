@@ -1,23 +1,8 @@
 import { Box, Flex, SimpleGrid, Text } from '@chakra-ui/react';
 import { IconType } from 'react-icons/lib';
-import {
-  Html,
-  Css,
-  Javascript,
-  Typescript,
-  Jquery,
-  Jest,
-  Bootstrap,
-  Node,
-  React,
-  Express,
-  Pug,
-  Mysql,
-  Mongodb,
-  Aws,
-  Tailwind
-} from './icons';
 import { SectionTitle } from './partials';
+import { skillIcons } from './icons';
+import { skills } from '../utils/info';
 
 export default function Skills() {
   return (
@@ -29,21 +14,10 @@ export default function Skills() {
         minChildWidth={{ base: '70px', md: '75px', lg: '80px' }}
         spacing={{ base: '20px', md: '25px', lg: '30px' }}
       >
-        <SkillIcon name="HTML" Icon={Html} />
-        <SkillIcon name="CSS" Icon={Css} />
-        <SkillIcon name="JavaScript" Icon={Javascript} />
-        <SkillIcon name="TypeScript" Icon={Typescript} />
-        <SkillIcon name="jQuery" Icon={Jquery} />
-        <SkillIcon name="Jest" Icon={Jest} />
-        <SkillIcon name="Bootstrap" Icon={Bootstrap} />
-        <SkillIcon name="TailwindCSS" Icon={Tailwind} />
-        <SkillIcon name="NodeJS" Icon={Node} />
-        <SkillIcon name="React" Icon={React} />
-        <SkillIcon name="ExpressJS" Icon={Express} />
-        <SkillIcon name="Pug" Icon={Pug} />
-        <SkillIcon name="MySQL" Icon={Mysql} />
-        <SkillIcon name="MongoDB" Icon={Mongodb} />
-        <SkillIcon name="AWS" Icon={Aws} />
+        {skills.map((name) => {
+          const Icon = skillIcons[name];
+          return <SkillIcon key={name} Icon={Icon} name={name} />;
+        })}
         <Text ml={4} my="auto" fontSize="xl">
           ...and more!
         </Text>

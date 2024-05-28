@@ -19,23 +19,22 @@ export default function About() {
           </Text>
           <Text>
             I got my first taste of programming in middle school when I started
-            writing programs in TI Basic on my calculator. I started out college
-            as a Psychology major, and soon after changed my major to Computer
-            Science, where I discovered a passion for Web Development.
+            writing programs in TI Basic on my calculator. I discovered my
+            passion for Web Development while pursuing my CS degree at the
+            University of Charlotte.
           </Text>
           <Text>
-            Since then, I've been specializing in JavaScript/TypeScript-based
-            development as I continue to grow myself and my skills through
-            constant learning and improvement.
+            I specialize in TypeScript-based development, and pride myself on
+            the quality of my work. I've got debugging skills that put Chat-GPT
+            to shame, and I'm always looking for ways to improve.
           </Text>
           <Text>I also have a cat named Rosie! (Pictured here)</Text>
           <Text>
             If you want to see more about me professionally, check out
             <span> </span>
             <Link
-              fontFamily="Overpass"
-              fontSize="1.1rem"
               href={resume}
+              style={{ textDecoration: 'underline' }}
               target="_blank"
             >
               my&nbsp;resume

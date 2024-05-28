@@ -1,30 +1,71 @@
+import { IconType } from 'react-icons';
+import {
+  FaAws,
+  FaBootstrap,
+  FaCss3Alt,
+  FaHtml5,
+  FaNodeJs,
+  FaReact
+} from 'react-icons/fa';
+import {
+  SiExpress,
+  SiGraphql,
+  SiJavascript,
+  SiJest,
+  SiJquery,
+  SiMongodb,
+  SiMysql,
+  SiPug,
+  SiTypescript,
+  SiTailwindcss,
+  SiMui,
+  SiNestjs,
+  SiPostgresql,
+  SiDocker,
+  SiPrisma,
+  SiAzuredevops,
+  SiAdobecreativecloud,
+  SiFigma
+} from 'react-icons/si';
+import { TbBrandNextjs, TbBrandVite } from 'react-icons/tb';
+
+export const skillIcons: Record<string, IconType> = {
+  AWS: FaAws,
+  'Azure DevOps': SiAzuredevops,
+  Bootstrap: FaBootstrap,
+  CSS: FaCss3Alt,
+  Docker: SiDocker,
+  Express: SiExpress,
+  GraphQL: SiGraphql,
+  HTML: FaHtml5,
+  JavaScript: SiJavascript,
+  Jest: SiJest,
+  jQuery: SiJquery,
+  MongoDB: SiMongodb,
+  MySQL: SiMysql,
+  NestJS: SiNestjs,
+  NodeJS: FaNodeJs,
+  PostgreSQL: SiPostgresql,
+  Prisma: SiPrisma,
+  Pug: SiPug,
+  React: FaReact,
+  TailwindCSS: SiTailwindcss,
+  TypeScript: SiTypescript,
+  Vite: TbBrandVite,
+  NextJS: TbBrandNextjs,
+  'Material-UI': SiMui,
+  'Adobe Creative Suite': SiAdobecreativecloud,
+  Figma: SiFigma
+};
+
 export { default as Logo } from './logo';
 
 export {
-  FaAws as Aws,
-  FaBootstrap as Bootstrap,
-  FaCss3Alt as Css,
   FaGithub as Github,
   FaGithubSquare as GithubSquare,
-  FaHtml5 as Html,
   FaLinkedin as Linkedin,
-  FaNodeJs as Node,
-  FaReact as React,
   FaSlack as Slack
 } from 'react-icons/fa';
-
-export {
-  SiExpress as Express,
-  SiGraphql as Graphql,
-  SiJavascript as Javascript,
-  SiJest as Jest,
-  SiJquery as Jquery,
-  SiMongodb as Mongodb,
-  SiMysql as Mysql,
-  SiPug as Pug,
-  SiTypescript as Typescript,
-  SiTailwindcss as Tailwind
-} from 'react-icons/si';
 
 export {
   RiMoonClearLine as DarkMode,

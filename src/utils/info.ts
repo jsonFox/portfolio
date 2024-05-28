@@ -1,8 +1,11 @@
+import { skillIcons } from '../components/icons';
+import { FeaturedProject, Project } from './types';
+
 export const titles = [
   'Full-Stack Developer',
-  'Comp Sci Graduate',
   'Coding Hobbyist',
-  'Cat Dad'
+  'Cat Dad',
+  'Debugging Expert'
 ];
 
 export const resume =
@@ -14,21 +17,37 @@ export const contacts = {
   email: 'jfox0096@gmail.com'
 };
 
-export const projects = {
-  default: {
-    title: '',
-    tags: [],
-    description: '',
-    live: '',
-    source: ''
-  },
+export const skills: Array<keyof typeof skillIcons> = [
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'TypeScript',
+  'PostgreSQL',
+  'MongoDB',
+  'NodeJS',
+  'Express',
+  'React',
+  'NextJS',
+  'NestJS',
+  'Jest',
+  'Material-UI',
+  'Prisma',
+  'Vite',
+  'AWS',
+  'Azure DevOps'
+];
+
+export const projects: {
+  featured: FeaturedProject[];
+  list: Project[];
+} = {
   featured: [
     {
-      title: 'Tierbuilder',
-      tags: ['TypeScript', 'Redux', 'Tailwind'],
-      description: 'A lightweight React clone of Tiermaker.com',
-      live: 'https://jsonfox.github.io/tierbuilder/',
-      source: 'https://github.com/jsonfox/tierbuilder',
+      title: 'Niner Esports Draft League',
+      tags: ['NextJS', 'PostgreSQL', 'Airtable'],
+      description:
+        "Custon tournament platform built for UNC Charlotte's Niner Esports.",
+      live: 'https://draftleague.nineresports.org/',
       mobile: false
     },
     {
@@ -50,12 +69,11 @@ export const projects = {
       source: 'https://github.com/jsonfox/blastoff'
     },
     {
-      title: 'Lanefo',
-      tags: ['Express', 'Pug', 'OAuth2', 'MongoDB'],
-      description:
-        'GCP-hosted SPA for analyzing match timeline data from the Riot match-v5 API.',
-      live: 'https://gankbait-36ce7.web.app/',
-      source: 'https://github.com/jsonfox/lanefo'
+      title: 'Tierbuilder',
+      tags: ['TypeScript', 'Redux', 'Tailwind'],
+      description: 'A lightweight React clone of Tiermaker.com',
+      live: 'https://jsonfox.github.io/tierbuilder/',
+      source: 'https://github.com/jsonfox/tierbuilder'
     },
     {
       title: 'OneStats',
