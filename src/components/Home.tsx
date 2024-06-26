@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react';
 import Typed from 'react-typing-effect';
 import { scrollTo } from '../utils/helpers';
-import { titles } from '../utils/info';
+import { resume, titles } from '../utils/info';
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -41,14 +41,25 @@ export default function Home() {
             eraseDelay={1500}
           />
         </Heading>
-        <Button
-          mt={4}
-          fontSize="lg"
-          onClick={() => scrollTo('work')}
-          variant="wide"
-        >
-          See my work
-        </Button>
+        <Flex mt={4}>
+          <Button
+            mr={6}
+            fontSize="lg"
+            onClick={() => scrollTo('work')}
+            variant="wide"
+          >
+            My work
+          </Button>
+          <Button
+            as="a"
+            fontSize="lg"
+            href={resume}
+            target="_blank"
+            variant="wide"
+          >
+            My CV
+          </Button>
+        </Flex>
       </Box>
       <Hide below="sm">
         <Skeleton borderRadius="full" isLoaded={isLoaded} {...offset}>
